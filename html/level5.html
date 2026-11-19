@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b2119">
+    <title>Ekspedisi 05 | Islam Story</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/level5.css">
+    <script src="../js/level5.js" defer></script>
+</head>
+
+<body class="level-page mutah-page">
+
+<header class="header">
+    <div class="container navbar">
+        <a href="index.html" class="brand">
+            <div class="brand-icon">☪</div>
+            <div class="brand-text">
+                <strong>ISLAM STORY</strong>
+                <small>EKSPEDISI KUIS SEJARAH</small>
+            </div>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="adventure.html" class="active">Petualangan</a>
+            <a href="about.html">Tentang</a>
+        </nav>
+
+        <a href="adventure.html" class="nav-button">
+            ← Kembali ke Peta
+        </a>
+    </div>
+</header>
+
+<main class="game-page">
+
+    <div class="game-top">
+        <div class="game-title">
+            <small>EKSPEDISI SEJARAH / 05</small>
+            <h1>Ekspedisi 05 — Tebak Peristiwa</h1>
+            <p>
+                Ikuti pergerakan pasukan di lembah berbatu,
+                pergantian pembawa panji, dan strategi
+                untuk menyelamatkan pasukan.
+            </p>
+        </div>
+
+        <div class="player-stats">
+            <div class="stat-box">
+                <span>NYAWA</span>
+                <strong id="lives">❤️❤️❤️</strong>
+            </div>
+
+            <div class="stat-box">
+                <span>WAKTU KUIS</span>
+                <strong id="timer">--</strong>
+            </div>
+
+            <button
+                id="soundButton"
+                class="sound-button"
+                type="button"
+                aria-pressed="true">
+                🔊 Musik ON
+            </button>
+        </div>
+    </div>
+
+    <div class="battle-scroll">
+        <div
+            id="battlefield"
+            class="battlefield mutah-field"
+            data-scene="ready">
+
+            <div class="mutah-sky"></div>
+            <div class="mutah-sun"></div>
+            <div class="mutah-haze"></div>
+
+            <div class="mutah-mountain mountain-one"></div>
+            <div class="mutah-mountain mountain-two"></div>
+            <div class="mutah-mountain mountain-three"></div>
+
+            <div class="mutah-cliff cliff-left"></div>
+            <div class="mutah-cliff cliff-right"></div>
+
+            <div class="mutah-ground"></div>
+            <div class="mutah-sand"></div>
+
+            <div class="mutah-valley-track"></div>
+            <div class="mutah-valley-track track-two"></div>
+
+            <div class="mutah-rock rock-one"></div>
+            <div class="mutah-rock rock-two"></div>
+            <div class="mutah-rock rock-three"></div>
+            <div class="mutah-rock rock-four"></div>
+            <div class="mutah-rock rock-five"></div>
+
+            <div class="mutah-shrub shrub-one"></div>
+            <div class="mutah-shrub shrub-two"></div>
+            <div class="mutah-shrub shrub-three"></div>
+
+            <div class="mutah-camp">
+                <div class="mutah-tent tent-one"></div>
+                <div class="mutah-tent tent-two"></div>
+                <div class="mutah-tent tent-three"></div>
+                <div class="mutah-camp-flag"></div>
+            </div>
+
+            <div class="mutah-expedition-tag">
+                EKSPEDISI 05 • JEJAK SEJARAH
+            </div>
+
+            <div class="mutah-date-tag">
+                JUMADAL ULA • 8 HIJRIAH
+            </div>
+
+            <div class="mutah-landmark">
+                LEMBAH BERBATU DI WILAYAH UTARA
+            </div>
+
+            <div id="storyCard" class="mutah-story-card">
+                <span>PERSIAPAN PASUKAN</span>
+                <strong>
+                    DUA PASUKAN BERSIAP DI MEDAN TERBUKA
+                </strong>
+            </div>
+
+            <div class="mutah-command-chain">
+                <div class="mutah-command-heading">
+                    PERGANTIAN PEMBAWA PANJI
+                </div>
+
+                <div class="mutah-command-items">
+                    <div id="commandZaid" class="command-item active">
+                        <b>01</b>
+                        <span>ZAID</span>
+                    </div>
+
+                    <div id="commandJafar" class="command-item">
+                        <b>02</b>
+                        <span>JA'FAR</span>
+                    </div>
+
+                    <div id="commandRawaha" class="command-item">
+                        <b>03</b>
+                        <span>ABDULLAH</span>
+                    </div>
+
+                    <div id="commandKhalid" class="command-item">
+                        <b>04</b>
+                        <span>KHALID</span>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="muslimLabel"
+                class="mutah-army-label muslim">
+                <strong>PASUKAN MUSLIM</strong>
+                <span>±3.000 ORANG</span>
+            </div>
+
+            <div
+                id="enemyLabel"
+                class="mutah-army-label enemy">
+                <strong>PASUKAN GABUNGAN</strong>
+                <span>BIZANTIUM & SEKUTU ARAB</span>
+            </div>
+
+            <div
+                id="muslimLayer"
+                class="mutah-unit-layer">
+            </div>
+
+            <div
+                id="enemyLayer"
+                class="mutah-unit-layer">
+            </div>
+
+            <div
+                id="effectsLayer"
+                class="mutah-effects-layer">
+            </div>
+
+            <div
+                id="standardBearer"
+                class="mutah-standard"
+                data-leader="zaid">
+
+                <div class="standard-pole">
+                    <div class="standard-cloth"></div>
+                </div>
+
+                <div class="standard-pawn"></div>
+
+                <div id="leaderBadge" class="mutah-leader-badge">
+                    <small>PEMBAWA PANJI</small>
+                    <strong id="leaderName">
+                        ZAID BIN HARITSAH
+                    </strong>
+                </div>
+            </div>
+
+            <div
+                id="enemyStandard"
+                class="mutah-standard enemy-standard">
+
+                <div class="standard-pole">
+                    <div class="standard-cloth"></div>
+                </div>
+
+                <div class="standard-pawn"></div>
+            </div>
+
+            <div
+                id="handoverGlow"
+                class="mutah-handover-glow">
+                ✦
+            </div>
+
+            <div
+                id="frontImpact"
+                class="mutah-impact">
+            </div>
+
+            <div class="mutah-dust dust-one"></div>
+            <div class="mutah-dust dust-two"></div>
+
+            <div
+                id="handoverNotice"
+                class="mutah-handover-notice">
+
+                <span>✦</span>
+
+                <div>
+                    <strong id="noticeTitle">
+                        PERGANTIAN PEMBAWA PANJI
+                    </strong>
+
+                    <small id="noticeText">
+                        Komando pasukan dilanjutkan.
+                    </small>
+                </div>
+            </div>
+
+            <div
+                id="strategyPanel"
+                class="mutah-strategy-panel">
+
+                <div class="strategy-icon">✦</div>
+
+                <div>
+                    <strong>FORMASI DIATUR KEMBALI</strong>
+
+                    <span>
+                        Khalid bin Walid memimpin
+                        pertahanan dan penarikan pasukan.
+                    </span>
+                </div>
+            </div>
+
+            <div class="battle-legend">
+                <div>
+                    <i class="green-dot"></i>
+                    Pasukan Muslim
+                </div>
+
+                <div>
+                    <i class="red-dot"></i>
+                    Pasukan Gabungan
+                </div>
+
+                <div>
+                    <i class="standard-dot"></i>
+                    Pembawa Panji
+                </div>
+            </div>
+
+            <div id="battleHint" class="battle-hint">
+                <span class="live-dot"></span>
+
+                <span id="phaseText">
+                    01 — PASUKAN BERSIAP DI LEMBAH BERBATU
+                </span>
+            </div>
+
+            <div class="scene-progress">
+                <div id="sceneProgress"></div>
+            </div>
+
+            <section
+                id="startPanel"
+                class="start-overlay">
+
+                <div class="start-card">
+                    <span class="eyebrow">
+                        EKSPEDISI SEJARAH / 05
+                    </span>
+
+                    <div class="start-symbol">✦</div>
+
+                    <h2>Ekspedisi 05</h2>
+
+                    <p>
+                        Saksikan pertempuran besar di wilayah
+                        utara yang berbatu.
+
+                        Perhatikan pergantian tiga komandan,
+                        perpindahan panji, dan keputusan
+                        pemimpin berikutnya untuk
+                        menyelamatkan pasukan.
+
+                        Setelah animasi selesai,
+                        tentukan nama peristiwanya.
+                    </p>
+
+                    <div class="start-details">
+                        <span>❤️ 3 NYAWA</span>
+                        <span>⏳ 10 DETIK</span>
+                        <span>🎬 VIDEO HADIAH</span>
+                    </div>
+
+                    <button
+                        id="startButton"
+                        class="primary-button"
+                        type="button">
+                        Mulai Ekspedisi →
+                    </button>
+                </div>
+            </section>
+
+            <section
+                id="quizPanel"
+                class="quiz-overlay hidden">
+
+                <div class="quiz-card">
+                    <div class="quiz-heading">
+                        <span>KUIS SEJARAH / 05</span>
+                        <span id="questionTimer">10 DETIK</span>
+                    </div>
+
+                    <h2>
+                        Peristiwa sejarah apa yang
+                        baru saja kamu saksikan?
+                    </h2>
+
+                    <p class="quiz-description">
+                        Ingat tiga pergantian komandan,
+                        Khalid bin Walid, dan strategi
+                        penarikan pasukan dari medan.
+                    </p>
+
+                    <div class="answer-grid">
+                        <button
+                            type="button"
+                            class="answer"
+                            data-answer="A">
+                            <span>A</span>
+                            Perang Hunain
+                        </button>
+
+                        <button
+                            type="button"
+                            class="answer"
+                            data-answer="B">
+                            <span>B</span>
+                            Perang Khandaq
+                        </button>
+
+                        <button
+                            type="button"
+                            class="answer"
+                            data-answer="C">
+                            <span>C</span>
+                            Perang Mu'tah
+                        </button>
+
+                        <button
+                            type="button"
+                            class="answer"
+                            data-answer="D">
+                            <span>D</span>
+                            Perang Khaibar
+                        </button>
+                    </div>
+
+                    <div class="timer-track">
+                        <div id="timerProgress"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                id="resultPanel"
+                class="result-overlay hidden">
+
+                <div class="result-card">
+                    <div
+                        id="resultIcon"
+                        class="result-icon wrong">
+                        ✕
+                    </div>
+
+                    <h2 id="resultTitle">
+                        Jawaban Salah!
+                    </h2>
+
+                    <p id="resultText"></p>
+
+                    <button
+                        id="resultButton"
+                        class="primary-button"
+                        type="button">
+                        Coba Lagi
+                    </button>
+                </div>
+            </section>
+
+            <section
+                id="rewardPanel"
+                class="reward-overlay hidden">
+
+                <div class="reward-card">
+                    <span class="eyebrow">
+                        EKSPEDISI SELESAI / 05
+                    </span>
+
+                    <h2>TEPAT! PERANG MU'TAH</h2>
+
+                    <p>
+                        Kamu berhasil mengenali pertempuran
+                        yang diwarnai pergantian komandan
+                        dan strategi penarikan pasukan.
+
+                        Lima ekspedisi berhasil diselesaikan.
+                        Progres petualanganmu sekarang 50%.
+                    </p>
+
+                    <div class="reward-video-frame">
+                        <video
+                            id="rewardVideo"
+                            preload="metadata"
+                            playsinline
+                            disablepictureinpicture
+                            disableRemotePlayback>
+
+                            <source
+                                src="../assets/reward-mutah.mp4"
+                                type="video/mp4">
+                        </video>
+
+                        <div
+                            id="videoLoading"
+                            class="video-loading">
+                            Menyiapkan video hadiah...
+                        </div>
+                    </div>
+
+                    <p
+                        id="videoMessage"
+                        class="media-message hidden">
+                    </p>
+
+                    <button
+                        id="manualPlayButton"
+                        class="primary-button hidden"
+                        type="button">
+                        ▶ Putar Video
+                    </button>
+
+                    <button
+                        id="returnMapButton"
+                        class="secondary-button hidden"
+                        type="button">
+                        Kembali ke Peta →
+                    </button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="game-bottom">
+        <p>
+            ✦ Amati pembawa panji,
+            bentrokan pasukan, dan
+            perubahan strategi pertempuran.
+        </p>
+
+        <span>DIBUAT OLEH PALPET</span>
+    </div>
+</main>
+
+<audio id="gameMusic" preload="auto">
+    <source
+        src="../assets/gameplay-mutah.mp3"
+        type="audio/mpeg">
+</audio>
+
+</body>
+</html>

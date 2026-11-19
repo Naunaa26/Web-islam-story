@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b2119">
+    <title>Ekspedisi 02 | Islam Story</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/level2.css">
+    <script src="../js/level2.js" defer></script>
+</head>
+
+<body class="level-page uhud-page">
+
+<header class="header">
+    <div class="container navbar">
+        <a href="index.html" class="brand">
+            <div class="brand-icon">☪</div>
+            <div class="brand-text">
+                <strong>ISLAM STORY</strong>
+                <small>EKSPEDISI KUIS SEJARAH</small>
+            </div>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="adventure.html" class="active">Petualangan</a>
+            <a href="about.html">Tentang</a>
+        </nav>
+
+        <a href="adventure.html" class="nav-button">
+            ← Kembali ke Peta
+        </a>
+    </div>
+</header>
+
+<main class="game-page">
+    <div class="game-top">
+        <div class="game-title">
+            <small>EKSPEDISI SEJARAH / 02</small>
+            <h1>Ekspedisi 02 — Tebak Peristiwa</h1>
+            <p>
+                Perhatikan posisi pemanah, pergerakan pasukan,
+                dan serangan dari arah yang tidak terduga.
+            </p>
+        </div>
+
+        <div class="player-stats">
+            <div class="stat-box">
+                <span>NYAWA</span>
+                <strong id="lives">❤️❤️❤️</strong>
+            </div>
+
+            <div class="stat-box">
+                <span>WAKTU KUIS</span>
+                <strong id="timer">--</strong>
+            </div>
+
+            <button
+                id="soundButton"
+                type="button"
+                class="sound-button"
+                aria-pressed="true">
+                🔊 Musik ON
+            </button>
+        </div>
+    </div>
+
+    <div class="battle-scroll">
+        <div
+            id="battlefield"
+            class="battlefield uhud-field"
+            data-scene="ready">
+
+            <div class="uhud-sky"></div>
+            <div class="uhud-sun"></div>
+            <div class="uhud-sand"></div>
+
+            <div class="uhud-mountain-range">
+                <div class="uhud-mountain-back"></div>
+                <div class="uhud-mountain-front"></div>
+                <div class="uhud-mountain-shadow"></div>
+            </div>
+
+            <div class="uhud-ground-ridge"></div>
+            <div class="uhud-ground-path"></div>
+
+            <div class="uhud-rock rock-one"></div>
+            <div class="uhud-rock rock-two"></div>
+            <div class="uhud-rock rock-three"></div>
+            <div class="uhud-rock rock-four"></div>
+
+            <div class="uhud-info-tag">
+                EKSPEDISI 02 • JEJAK SEJARAH
+            </div>
+
+            <div class="uhud-date-tag">
+                SYAWAL • 3 HIJRIAH
+            </div>
+
+            <div class="uhud-mountain-label">
+                PEGUNUNGAN
+            </div>
+
+            <div class="uhud-archer-hill">
+                <div class="uhud-hill-top"></div>
+            </div>
+
+            <div class="uhud-hill-label">
+                BUKIT PEMANAH
+            </div>
+
+            <div
+                id="archerCommander"
+                class="uhud-commander">
+
+                <strong>ABDULLAH BIN JUBAIR</strong>
+                <span id="archerStatus">
+                    MEMIMPIN ±50 PEMANAH
+                </span>
+            </div>
+
+            <svg
+                class="uhud-route-svg"
+                viewBox="0 0 1000 560"
+                preserveAspectRatio="none"
+                aria-hidden="true">
+
+                <path
+                    id="cavalryRoute"
+                    d="M1050 280
+                       C975 245 960 155 844 123
+                       C707 84 560 88 438 148
+                       C327 200 242 255 256 335
+                       C263 383 303 408 367 416">
+                </path>
+            </svg>
+
+            <div
+                id="cavalryBadge"
+                class="uhud-cavalry-badge">
+
+                <strong>KAVALERI KHALID</strong>
+                <span>GERAKAN MEMUTAR</span>
+            </div>
+
+            <div
+                id="muslimLabel"
+                class="uhud-army-label muslim">
+
+                <strong>PASUKAN MUSLIM</strong>
+                <span>±700 ORANG</span>
+
+                <div class="uhud-banner green-banner">
+                    <i></i>
+                </div>
+            </div>
+
+            <div
+                id="qurayshLabel"
+                class="uhud-army-label quraysh">
+
+                <strong>PASUKAN QURAISY</strong>
+                <span>±3.000 ORANG</span>
+
+                <div class="uhud-banner red-banner">
+                    <i></i>
+                </div>
+            </div>
+
+            <div id="unitsLayer" class="uhud-units-layer"></div>
+            <div id="archersLayer" class="uhud-archers-layer"></div>
+            <div id="cavalryLayer" class="uhud-cavalry-layer"></div>
+            <div id="arrowLayer" class="uhud-arrow-layer"></div>
+
+            <div class="uhud-dust dust-one"></div>
+            <div class="uhud-dust dust-two"></div>
+
+            <div
+                id="frontImpact"
+                class="uhud-impact">
+            </div>
+
+            <div
+                id="rearImpact"
+                class="uhud-impact">
+            </div>
+
+            <div
+                id="storyCard"
+                class="uhud-story-card">
+
+                <span>CATATAN PERISTIWA</span>
+                <strong>
+                    DUA PASUKAN MENGAMBIL POSISI
+                </strong>
+            </div>
+
+            <div
+                id="attackAlert"
+                class="uhud-attack-alert">
+
+                <span class="uhud-alert-icon">⚔</span>
+
+                <div>
+                    <strong>SERANGAN DARI BELAKANG</strong>
+                    <small>
+                        Kavaleri mendekati celah pertahanan.
+                    </small>
+                </div>
+            </div>
+
+            <div class="battle-legend uhud-legend">
+                <div>
+                    <i class="green-dot"></i>
+                    Pasukan Muslim
+                </div>
+
+                <div>
+                    <i class="red-dot"></i>
+                    Pasukan Quraisy
+                </div>
+
+                <div>
+                    <i class="cavalry-dot"></i>
+                    Kavaleri Quraisy
+                </div>
+            </div>
+
+            <div id="battleHint" class="battle-hint">
+                <span class="live-dot"></span>
+                <span id="phaseText">
+                    01 — PASUKAN BERSIAP DI MEDAN
+                </span>
+            </div>
+
+            <div class="scene-progress">
+                <div id="sceneProgress"></div>
+            </div>
+
+            <section
+                id="startPanel"
+                class="start-overlay">
+
+                <div class="start-card">
+                    <span class="eyebrow">
+                        EKSPEDISI SEJARAH / 02
+                    </span>
+
+                    <div class="start-symbol">✦</div>
+
+                    <h2>Ekspedisi 02</h2>
+
+                    <p>
+                        Perhatikan sebuah pertempuran
+                        di kawasan pegunungan. Amati
+                        posisi pasukan, tugas para pemanah,
+                        dan perubahan arah serangan.
+                        Setelah animasi berakhir,
+                        tebak peristiwa sejarahnya.
+                    </p>
+
+                    <div class="start-details">
+                        <span>❤️ 3 NYAWA</span>
+                        <span>⏳ 10 DETIK</span>
+                        <span>🎬 VIDEO HADIAH</span>
+                    </div>
+
+                    <button
+                        id="startButton"
+                        type="button"
+                        class="primary-button">
+                        Mulai Ekspedisi →
+                    </button>
+                </div>
+            </section>
+
+            <section
+                id="quizPanel"
+                class="quiz-overlay hidden">
+
+                <div class="quiz-card">
+                    <div class="quiz-heading">
+                        <span>KUIS SEJARAH / 02</span>
+                        <span id="questionTimer">
+                            10 DETIK
+                        </span>
+                    </div>
+
+                    <h2>
+                        Peristiwa sejarah apa yang
+                        baru saja kamu saksikan?
+                    </h2>
+
+                    <p class="quiz-description">
+                        Ingat Bukit Pemanah, pasukan
+                        yang sempat mundur, dan kavaleri
+                        yang menyerang dari belakang.
+                    </p>
+
+                    <div class="answer-grid">
+                        <button
+                            class="answer"
+                            type="button"
+                            data-answer="A">
+                            <span>A</span>
+                            Perang Badar
+                        </button>
+
+                        <button
+                            class="answer"
+                            type="button"
+                            data-answer="B">
+                            <span>B</span>
+                            Perang Uhud
+                        </button>
+
+                        <button
+                            class="answer"
+                            type="button"
+                            data-answer="C">
+                            <span>C</span>
+                            Perang Khandaq
+                        </button>
+
+                        <button
+                            class="answer"
+                            type="button"
+                            data-answer="D">
+                            <span>D</span>
+                            Perang Khaibar
+                        </button>
+                    </div>
+
+                    <div class="timer-track">
+                        <div id="timerProgress"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                id="resultPanel"
+                class="result-overlay hidden">
+
+                <div class="result-card">
+                    <div
+                        id="resultIcon"
+                        class="result-icon wrong">
+                        ✕
+                    </div>
+
+                    <h2 id="resultTitle">
+                        Jawaban Salah!
+                    </h2>
+
+                    <p id="resultText"></p>
+
+                    <button
+                        id="resultButton"
+                        type="button"
+                        class="primary-button">
+                        Coba Lagi
+                    </button>
+                </div>
+            </section>
+
+            <section
+                id="rewardPanel"
+                class="reward-overlay hidden">
+
+                <div class="reward-card">
+                    <span class="eyebrow">
+                        EKSPEDISI SELESAI / 02
+                    </span>
+
+                    <h2>TEPAT! PERANG UHUD</h2>
+
+                    <p>
+                        Kamu berhasil mengenali peristiwa
+                        Perang Uhud. Kini ekspedisi
+                        selanjutnya sudah terbuka!
+                    </p>
+
+                    <div class="reward-video-frame">
+                        <video
+                            id="rewardVideo"
+                            preload="metadata"
+                            playsinline
+                            disablepictureinpicture
+                            disableRemotePlayback>
+
+                            <source
+                                src="../assets/reward-uhud.mp4"
+                                type="video/mp4">
+                        </video>
+
+                        <div
+                            id="videoLoading"
+                            class="video-loading">
+                            Menyiapkan video hadiah...
+                        </div>
+                    </div>
+
+                    <p
+                        id="videoMessage"
+                        class="media-message hidden">
+                    </p>
+
+                    <button
+                        id="manualPlayButton"
+                        type="button"
+                        class="primary-button hidden">
+                        ▶ Putar Video
+                    </button>
+
+                    <button
+                        id="returnMapButton"
+                        type="button"
+                        class="secondary-button hidden">
+                        Next →
+                    </button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="game-bottom">
+        <p>
+            ✦ Perhatikan posisi bukit dan arah
+            serangan untuk menemukan jawaban.
+        </p>
+
+        <span>DIBUAT OLEH PALPET</span>
+    </div>
+</main>
+
+<audio id="gameMusic" preload="auto">
+    <source
+        src="../assets/gameplay_uhud.mp3"
+        type="audio/mpeg">
+</audio>
+
+</body>
+</html>

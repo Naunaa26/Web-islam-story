@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b2119">
+    <title>Ekspedisi 04 | Islam Story</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/level4.css">
+    <script src="../js/level4.js" defer></script>
+</head>
+<body class="level-page khaibar-page">
+
+<header class="header">
+    <div class="container navbar">
+        <a href="index.html" class="brand">
+            <div class="brand-icon">☪</div>
+            <div class="brand-text">
+                <strong>ISLAM STORY</strong>
+                <small>EKSPEDISI KUIS SEJARAH</small>
+            </div>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="adventure.html" class="active">Petualangan</a>
+            <a href="about.html">Tentang</a>
+        </nav>
+
+        <a href="adventure.html" class="nav-button">
+            ← Kembali ke Peta
+        </a>
+    </div>
+</header>
+
+<main class="game-page">
+    <div class="game-top">
+        <div class="game-title">
+            <small>EKSPEDISI SEJARAH / 04</small>
+            <h1>Ekspedisi 04 — Tebak Peristiwa</h1>
+            <p>
+                Amati kompleks benteng, pertahanan gerbang,
+                pembawa panji, dan pergerakan pasukan.
+                Temukan peristiwa sejarah yang sedang ditampilkan.
+            </p>
+        </div>
+
+        <div class="player-stats">
+            <div class="stat-box">
+                <span>NYAWA</span>
+                <strong id="lives">❤️❤️❤️</strong>
+            </div>
+
+            <div class="stat-box">
+                <span>WAKTU KUIS</span>
+                <strong id="timer">--</strong>
+            </div>
+
+            <button
+                id="soundButton"
+                class="sound-button"
+                type="button">
+                🔊 Musik ON
+            </button>
+        </div>
+    </div>
+
+    <div class="battle-scroll">
+        <div
+            id="battlefield"
+            class="battlefield khaibar-field"
+            data-scene="ready">
+
+            <div class="khaibar-sky"></div>
+            <div class="khaibar-sun"></div>
+            <div class="khaibar-mountain mountain-one"></div>
+            <div class="khaibar-mountain mountain-two"></div>
+            <div class="khaibar-land"></div>
+            <div class="khaibar-sand"></div>
+            <div class="khaibar-path"></div>
+
+            <div class="khaibar-palm palm-one"></div>
+            <div class="khaibar-palm palm-two"></div>
+            <div class="khaibar-palm palm-three"></div>
+            <div class="khaibar-palm palm-four"></div>
+
+            <div class="khaibar-rock rock-one"></div>
+            <div class="khaibar-rock rock-two"></div>
+            <div class="khaibar-rock rock-three"></div>
+
+            <div class="khaibar-expedition-tag">
+                EKSPEDISI 04 • JEJAK SEJARAH
+            </div>
+
+            <div class="khaibar-date-tag">
+                TAHUN 7 HIJRIAH
+            </div>
+
+            <div class="khaibar-oasis-tag">
+                KAWASAN OASIS BERBENTENG
+            </div>
+
+            <div class="khaibar-fortress">
+                <div class="khaibar-back-fort fort-left">
+                    <div class="back-fort-roof"></div>
+                    <div class="back-fort-door"></div>
+                </div>
+
+                <div class="khaibar-back-fort fort-right">
+                    <div class="back-fort-roof"></div>
+                    <div class="back-fort-door"></div>
+                </div>
+
+                <div class="khaibar-inner-fort">
+                    <div class="inner-fort-roof"></div>
+                    <div class="inner-fort-window window-one"></div>
+                    <div class="inner-fort-window window-two"></div>
+                    <div class="inner-fort-window window-three"></div>
+                </div>
+
+                <div class="khaibar-wall">
+                    <div class="khaibar-battlements"></div>
+
+                    <div class="wall-arrow-slit slit-one"></div>
+                    <div class="wall-arrow-slit slit-two"></div>
+                    <div class="wall-arrow-slit slit-three"></div>
+
+                    <div id="fortGate" class="khaibar-gate">
+                        <div class="gate-interior"></div>
+                        <div class="gate-door gate-door-left">
+                            <i></i>
+                        </div>
+                        <div class="gate-door gate-door-right">
+                            <i></i>
+                        </div>
+                        <div class="gate-lock"></div>
+                    </div>
+                </div>
+
+                <div class="khaibar-tower tower-left">
+                    <div class="tower-battlements"></div>
+                    <div class="tower-slit"></div>
+                </div>
+
+                <div class="khaibar-tower tower-right">
+                    <div class="tower-battlements"></div>
+                    <div class="tower-slit"></div>
+                </div>
+
+                <div class="khaibar-front-shadow"></div>
+            </div>
+
+            <div class="khaibar-fortress-label">
+                KOMPLEKS PERTAHANAN BENTENG
+            </div>
+
+            <div
+                id="wallGuardLayer"
+                class="khaibar-wall-guard-layer">
+            </div>
+
+            <div
+                id="muslimLayer"
+                class="khaibar-unit-layer">
+            </div>
+
+            <div
+                id="defenderLayer"
+                class="khaibar-unit-layer">
+            </div>
+
+            <div
+                id="arrowLayer"
+                class="khaibar-arrow-layer">
+            </div>
+
+            <div
+                id="effectsLayer"
+                class="khaibar-effects-layer">
+            </div>
+
+            <div
+                id="muslimStandard"
+                class="khaibar-standard muslim-standard">
+                <div class="standard-pole"></div>
+                <div class="standard-cloth"></div>
+                <div class="standard-pawn"></div>
+
+                <div id="aliBadge" class="khaibar-ali-badge">
+                    <small>PEMBAWA PANJI</small>
+                    <strong>ALI BIN ABI THALIB</strong>
+                </div>
+            </div>
+
+            <div
+                id="defenderStandard"
+                class="khaibar-standard defender-standard">
+                <div class="standard-pole"></div>
+                <div class="standard-cloth"></div>
+                <div class="standard-pawn"></div>
+            </div>
+
+            <div
+                id="muslimLabel"
+                class="khaibar-army-label muslim">
+                <strong>PASUKAN MUSLIM</strong>
+                <span>SEKITAR 1.400 ORANG</span>
+            </div>
+
+            <div
+                id="defenderLabel"
+                class="khaibar-army-label defenders">
+                <strong>PENJAGA BENTENG</strong>
+                <span>PERTAHANAN GERBANG & TEMBOK</span>
+            </div>
+
+            <div id="frontImpact" class="khaibar-impact"></div>
+            <div id="gateImpact" class="khaibar-impact"></div>
+
+            <div class="khaibar-dust dust-one"></div>
+            <div class="khaibar-dust dust-two"></div>
+
+            <div id="storyCard" class="khaibar-story-card">
+                <span>PERSIAPAN PERTAHANAN</span>
+                <strong>
+                    PENJAGA MENEMPATI TEMBOK DAN GERBANG
+                </strong>
+            </div>
+
+            <div id="gateAlert" class="khaibar-gate-alert">
+                <span class="gate-alert-icon">⚔</span>
+                <div>
+                    <strong>PERTAHANAN GERBANG DITEMBUS</strong>
+                    <small>
+                        Pasukan bergerak memasuki kompleks benteng.
+                    </small>
+                </div>
+            </div>
+
+            <div class="battle-legend">
+                <div>
+                    <i class="green-dot"></i>
+                    Pasukan Muslim
+                </div>
+                <div>
+                    <i class="red-dot"></i>
+                    Penjaga Benteng
+                </div>
+                <div>
+                    <i class="guard-dot"></i>
+                    Pemanah di Tembok
+                </div>
+            </div>
+
+            <div id="battleHint" class="battle-hint">
+                <span class="live-dot"></span>
+                <span id="phaseText">
+                    01 — PASUKAN BERSIAP DI DEPAN BENTENG
+                </span>
+            </div>
+
+            <div class="scene-progress">
+                <div id="sceneProgress"></div>
+            </div>
+
+            <section id="startPanel" class="start-overlay">
+                <div class="start-card">
+                    <span class="eyebrow">
+                        EKSPEDISI SEJARAH / 04
+                    </span>
+
+                    <div class="start-symbol">✦</div>
+                    <h2>Ekspedisi 04</h2>
+
+                    <p>
+                        Saksikan serangan menuju kawasan oasis
+                        yang dilindungi benteng-benteng tinggi.
+                        Perhatikan penjaga di atas tembok,
+                        pembawa panji, dan usaha menguasai gerbang.
+                        Setelah animasi selesai, tebak nama
+                        peristiwa sejarahnya.
+                    </p>
+
+                    <div class="start-details">
+                        <span>❤️ 3 NYAWA</span>
+                        <span>⏳ 10 DETIK</span>
+                        <span>🎬 VIDEO HADIAH</span>
+                    </div>
+
+                    <button
+                        id="startButton"
+                        class="primary-button"
+                        type="button">
+                        Mulai Ekspedisi →
+                    </button>
+                </div>
+            </section>
+
+            <section id="quizPanel" class="quiz-overlay hidden">
+                <div class="quiz-card">
+                    <div class="quiz-heading">
+                        <span>KUIS SEJARAH / 04</span>
+                        <span id="questionTimer">10 DETIK</span>
+                    </div>
+
+                    <h2>
+                        Peristiwa sejarah apa yang
+                        baru saja kamu saksikan?
+                    </h2>
+
+                    <p class="quiz-description">
+                        Ingat kompleks benteng di oasis,
+                        penyerbuan gerbang, dan panji
+                        yang dibawa Ali bin Abi Thalib.
+                    </p>
+
+                    <div class="answer-grid">
+                        <button
+                            class="answer"
+                            type="button"
+                            data-answer="A">
+                            <span>A</span>
+                            Perang Uhud
+                        </button>
+
+                        <button
+                            class="answer"
+                            type="button"
+                            data-answer="B">
+                            <span>B</span>
+                            Perang Hunain
+                        </button>
+
+                        <button
+                            class="answer"
+                            type="button"
+                            data-answer="C">
+                            <span>C</span>
+                            Perang Khandaq
+                        </button>
+
+                        <button
+                            class="answer"
+                            type="button"
+                            data-answer="D">
+                            <span>D</span>
+                            Perang Khaibar
+                        </button>
+                    </div>
+
+                    <div class="timer-track">
+                        <div id="timerProgress"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resultPanel" class="result-overlay hidden">
+                <div class="result-card">
+                    <div id="resultIcon" class="result-icon wrong">
+                        ✕
+                    </div>
+
+                    <h2 id="resultTitle">Jawaban Salah!</h2>
+                    <p id="resultText"></p>
+
+                    <button
+                        id="resultButton"
+                        class="primary-button"
+                        type="button">
+                        Coba Lagi
+                    </button>
+                </div>
+            </section>
+
+            <section id="rewardPanel" class="reward-overlay hidden">
+                <div class="reward-card">
+                    <span class="eyebrow">
+                        EKSPEDISI SELESAI / 04
+                    </span>
+
+                    <h2>TEPAT! PERANG KHAIBAR</h2>
+
+                    <p>
+                        Kamu berhasil mengenali peristiwa
+                        penaklukan benteng-benteng Khaibar.
+                        Ekspedisi 05 kini terbuka.
+                    </p>
+
+                    <div class="reward-video-frame">
+                        <video
+                            id="rewardVideo"
+                            preload="metadata"
+                            playsinline
+                            disablepictureinpicture
+                            disableRemotePlayback>
+                            <source
+                                src="../assets/reward-khaibar.mp4"
+                                type="video/mp4">
+                        </video>
+
+                        <div
+                            id="videoLoading"
+                            class="video-loading">
+                            Menyiapkan video hadiah...
+                        </div>
+                    </div>
+
+                    <p
+                        id="videoMessage"
+                        class="media-message hidden">
+                    </p>
+
+                    <button
+                        id="manualPlayButton"
+                        class="primary-button hidden"
+                        type="button">
+                        ▶ Putar Video
+                    </button>
+
+                    <button
+                        id="returnMapButton"
+                        class="secondary-button hidden"
+                        type="button">
+                        Next →
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="game-bottom">
+        <p>
+            ✦ Amati penjaga tembok, pertempuran
+            di depan gerbang, dan pergerakan panji.
+        </p>
+        <span>DIBUAT OLEH PALPET</span>
+    </div>
+</main>
+
+<audio id="gameMusic" preload="auto">
+    <source
+        src="../assets/gameplay-khaibar.mp3"
+        type="audio/mpeg">
+</audio>
+
+</body>
+</html>

@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b2119">
+    <title>Ekspedisi 03 | Islam Story</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/level3.css">
+    <script src="../js/level3.js" defer></script>
+</head>
+
+<body class="level-page khandaq-page">
+
+<header class="header">
+    <div class="container navbar">
+        <a href="index.html" class="brand">
+            <div class="brand-icon">☪</div>
+            <div class="brand-text">
+                <strong>ISLAM STORY</strong>
+                <small>EKSPEDISI KUIS SEJARAH</small>
+            </div>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="adventure.html" class="active">Petualangan</a>
+            <a href="about.html">Tentang</a>
+        </nav>
+
+        <a href="adventure.html" class="nav-button">
+            ← Kembali ke Peta
+        </a>
+    </div>
+</header>
+
+<main class="game-page">
+    <div class="game-top">
+        <div class="game-title">
+            <small>EKSPEDISI SEJARAH / 03</small>
+            <h1>Ekspedisi 03 — Tebak Peristiwa</h1>
+            <p>
+                Perhatikan bentuk pertahanan kota,
+                upaya pasukan penyerang, dan kejadian
+                yang mengakhiri pengepungan.
+            </p>
+        </div>
+
+        <div class="player-stats">
+            <div class="stat-box">
+                <span>NYAWA</span>
+                <strong id="lives">❤️❤️❤️</strong>
+            </div>
+
+            <div class="stat-box">
+                <span>WAKTU KUIS</span>
+                <strong id="timer">--</strong>
+            </div>
+
+            <button
+                id="soundButton"
+                type="button"
+                class="sound-button"
+                aria-pressed="true">
+                🔊 Musik ON
+            </button>
+        </div>
+    </div>
+
+    <div class="battle-scroll">
+        <div
+            id="battlefield"
+            class="battlefield khandaq-field"
+            data-scene="ready">
+
+            <div class="khandaq-sky"></div>
+            <div class="khandaq-sun"></div>
+            <div class="khandaq-sand"></div>
+
+            <div class="khandaq-dune dune-one"></div>
+            <div class="khandaq-dune dune-two"></div>
+            <div class="khandaq-dune dune-three"></div>
+
+            <div class="khandaq-stone stone-one"></div>
+            <div class="khandaq-stone stone-two"></div>
+            <div class="khandaq-stone stone-three"></div>
+            <div class="khandaq-stone stone-four"></div>
+
+            <div class="khandaq-palm palm-one">
+                <span></span>
+            </div>
+
+            <div class="khandaq-palm palm-two">
+                <span></span>
+            </div>
+
+            <div class="khandaq-palm palm-three">
+                <span></span>
+            </div>
+
+            <div class="khandaq-camp">
+                <div class="khandaq-tent tent-one"></div>
+                <div class="khandaq-tent tent-two"></div>
+                <div class="khandaq-tent tent-three"></div>
+            </div>
+
+            <div class="khandaq-city">
+                <div class="khandaq-city-tower left-tower"></div>
+
+                <div class="khandaq-city-main">
+                    <div class="khandaq-city-dome"></div>
+                    <div class="khandaq-city-door"></div>
+                </div>
+
+                <div class="khandaq-city-tower right-tower"></div>
+            </div>
+
+            <div class="khandaq-city-caption">
+                KOTA YANG DIPERTAHANKAN
+            </div>
+
+            <div class="khandaq-info-tag">
+                EKSPEDISI 03 • JEJAK SEJARAH
+            </div>
+
+            <div class="khandaq-date-tag">
+                TAHUN 5 HIJRIAH
+            </div>
+
+            <div id="eventCard" class="khandaq-event-card">
+                <span>PERSIAPAN</span>
+                <strong>
+                    PASUKAN MENYIAPKAN PERTAHANAN
+                </strong>
+            </div>
+
+            <div id="salmanBadge" class="khandaq-salman">
+                <strong>SALMAN AL-FARISI</strong>
+                <span>USULAN MEMBANGUN PARIT</span>
+            </div>
+
+            <svg
+                class="khandaq-trench-svg"
+                viewBox="0 0 1000 560"
+                preserveAspectRatio="none"
+                aria-hidden="true">
+
+                <defs>
+                    <path
+                        id="trenchGeometry"
+                        d="M-30 306
+                           C130 279 230 294 350 302
+                           S615 313 738 291
+                           S935 305 1030 298">
+                    </path>
+                </defs>
+
+                <use
+                    id="trenchOuter"
+                    href="#trenchGeometry"
+                    class="khandaq-trench-rim">
+                </use>
+
+                <use
+                    id="trenchBank"
+                    href="#trenchGeometry"
+                    class="khandaq-trench-bank">
+                </use>
+
+                <use
+                    id="trenchMiddle"
+                    href="#trenchGeometry"
+                    class="khandaq-trench-middle">
+                </use>
+
+                <use
+                    id="trenchFloor"
+                    href="#trenchGeometry"
+                    class="khandaq-trench-floor">
+                </use>
+            </svg>
+
+            <div id="trenchLabel" class="khandaq-trench-label">
+                PARIT PERTAHANAN
+            </div>
+
+            <div
+                id="coalitionLabel"
+                class="khandaq-army-label coalition">
+                <strong>PASUKAN GABUNGAN</strong>
+                <span>±10.000 ORANG</span>
+            </div>
+
+            <div
+                id="defenderLabel"
+                class="khandaq-army-label defenders">
+                <strong>PASUKAN MUSLIM</strong>
+                <span>±3.000 ORANG</span>
+            </div>
+
+            <div
+                id="coalitionLayer"
+                class="khandaq-unit-layer">
+            </div>
+
+            <div
+                id="defenderLayer"
+                class="khandaq-unit-layer">
+            </div>
+
+            <div
+                id="scoutLayer"
+                class="khandaq-scout-layer">
+            </div>
+
+            <div
+                id="arrowLayer"
+                class="khandaq-arrow-layer">
+            </div>
+
+            <div
+                id="windLayer"
+                class="khandaq-wind-layer">
+            </div>
+
+            <div id="breachImpact" class="khandaq-impact"></div>
+            <div id="breachDust" class="khandaq-dust"></div>
+
+            <div id="breachAlert" class="khandaq-breach-alert">
+                <strong>UPAYA MENEROBOS PARIT</strong>
+                <span>
+                    Sejumlah penyerang mencoba mencapai
+                    sisi pertahanan.
+                </span>
+            </div>
+
+            <div id="stormBanner" class="khandaq-storm-banner">
+                <strong>ANGIN KENCANG MENERPA PERKEMAHAN</strong>
+                <span>Pengepungan mulai kehilangan kekuatannya</span>
+            </div>
+
+            <div class="battle-legend">
+                <div>
+                    <i class="green-dot"></i>
+                    Pasukan Muslim
+                </div>
+
+                <div>
+                    <i class="red-dot"></i>
+                    Pasukan Gabungan
+                </div>
+
+                <div>
+                    <i class="trench-dot"></i>
+                    Parit Pertahanan
+                </div>
+            </div>
+
+            <div id="battleHint" class="battle-hint">
+                <span class="live-dot"></span>
+
+                <span id="phaseText">
+                    01 — PERSIAPAN PERTAHANAN KOTA
+                </span>
+            </div>
+
+            <div class="scene-progress">
+                <div id="sceneProgress"></div>
+            </div>
+
+            <section
+                id="startPanel"
+                class="start-overlay">
+
+                <div class="start-card">
+                    <span class="eyebrow">
+                        EKSPEDISI SEJARAH / 03
+                    </span>
+
+                    <div class="start-symbol">✦</div>
+
+                    <h2>Ekspedisi 03</h2>
+
+                    <p>
+                        Saksikan sebuah kota yang menghadapi
+                        pasukan gabungan dalam jumlah besar.
+
+                        Perhatikan strategi pertahanannya,
+                        jalannya pengepungan, dan
+                        bagaimana pasukan penyerang akhirnya
+                        meninggalkan medan.
+
+                        Setelah animasi berakhir,
+                        tebak nama peristiwanya.
+                    </p>
+
+                    <div class="start-details">
+                        <span>❤️ 3 NYAWA</span>
+                        <span>⏳ 10 DETIK</span>
+                        <span>🎬 VIDEO HADIAH</span>
+                    </div>
+
+                    <button
+                        id="startButton"
+                        class="primary-button"
+                        type="button">
+                        Mulai Ekspedisi →
+                    </button>
+                </div>
+            </section>
+
+            <section
+                id="quizPanel"
+                class="quiz-overlay hidden">
+
+                <div class="quiz-card">
+                    <div class="quiz-heading">
+                        <span>KUIS SEJARAH / 03</span>
+
+                        <span id="questionTimer">
+                            10 DETIK
+                        </span>
+                    </div>
+
+                    <h2>
+                        Peristiwa sejarah apa yang
+                        baru saja kamu saksikan?
+                    </h2>
+
+                    <p class="quiz-description">
+                        Ingat strategi parit, pengepungan
+                        pasukan gabungan, dan angin kencang
+                        yang mengakhiri serangan.
+                    </p>
+
+                    <div class="answer-grid">
+                        <button
+                            type="button"
+                            class="answer"
+                            data-answer="A">
+                            <span>A</span>
+                            Perang Badar
+                        </button>
+
+                        <button
+                            type="button"
+                            class="answer"
+                            data-answer="B">
+                            <span>B</span>
+                            Perang Uhud
+                        </button>
+
+                        <button
+                            type="button"
+                            class="answer"
+                            data-answer="C">
+                            <span>C</span>
+                            Perang Khandaq
+                        </button>
+
+                        <button
+                            type="button"
+                            class="answer"
+                            data-answer="D">
+                            <span>D</span>
+                            Perang Khaibar
+                        </button>
+                    </div>
+
+                    <div class="timer-track">
+                        <div id="timerProgress"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                id="resultPanel"
+                class="result-overlay hidden">
+
+                <div class="result-card">
+                    <div
+                        id="resultIcon"
+                        class="result-icon wrong">
+                        ✕
+                    </div>
+
+                    <h2 id="resultTitle">
+                        Jawaban Salah!
+                    </h2>
+
+                    <p id="resultText"></p>
+
+                    <button
+                        id="resultButton"
+                        type="button"
+                        class="primary-button">
+                        Coba Lagi
+                    </button>
+                </div>
+            </section>
+
+            <section
+                id="rewardPanel"
+                class="reward-overlay hidden">
+
+                <div class="reward-card">
+                    <span class="eyebrow">
+                        EKSPEDISI SELESAI / 03
+                    </span>
+
+                    <h2>TEPAT! PERANG KHANDAQ</h2>
+
+                    <p>
+                        Kamu berhasil mengenali peristiwa
+                        Perang Khandaq atau Perang Ahzab.
+
+                        Ekspedisi berikutnya sudah terbuka.
+                    </p>
+
+                    <div class="reward-video-frame">
+                        <video
+                            id="rewardVideo"
+                            preload="metadata"
+                            playsinline
+                            disablepictureinpicture
+                            disableRemotePlayback>
+
+                            <source
+                                src="../assets/reward-khandaq.mp4"
+                                type="video/mp4">
+                        </video>
+
+                        <div
+                            id="videoLoading"
+                            class="video-loading">
+                            Menyiapkan video hadiah...
+                        </div>
+                    </div>
+
+                    <p
+                        id="videoMessage"
+                        class="media-message hidden">
+                    </p>
+
+                    <button
+                        id="manualPlayButton"
+                        type="button"
+                        class="primary-button hidden">
+                        ▶ Putar Video
+                    </button>
+
+                    <button
+                        id="returnMapButton"
+                        type="button"
+                        class="secondary-button hidden">
+                        Next →
+                    </button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="game-bottom">
+        <p>
+            ✦ Amati posisi parit, pergerakan pasukan,
+            dan perubahan keadaan selama pengepungan.
+        </p>
+
+        <span>DIBUAT OLEH PALPET</span>
+    </div>
+</main>
+
+<audio id="gameMusic" preload="auto">
+    <source
+        src="../assets/gameplay-khandaq.mp3"
+        type="audio/mpeg">
+</audio>
+
+</body>
+</html>

@@ -1,0 +1,954 @@
+
+@import url("./level2.css");
+
+.mutah-page .mutah-field {
+    position: relative;
+    isolation: isolate;
+    flex: 0 0 1000px;
+    width: 1000px;
+    height: 560px;
+    overflow: hidden;
+    border: 7px solid #806142;
+    border-radius: 22px;
+    background: #c5a37c;
+    box-shadow:
+        inset 0 0 0 2px #f1d5a5,
+        0 16px 34px #00000040;
+}
+
+.mutah-page .mutah-sky {
+    position: absolute;
+    inset: 0 0 50%;
+    z-index: 0;
+    background: linear-gradient(
+        180deg,
+        #819b9a 0%,
+        #b6b7a0 43%,
+        #dfc399 100%
+    );
+}
+
+.mutah-page .mutah-sun {
+    position: absolute;
+    top: -90px;
+    right: 100px;
+    z-index: 1;
+    width: 205px;
+    height: 205px;
+    border-radius: 50%;
+    background: #f9dba0;
+    box-shadow: 0 0 90px #ffdda68c;
+}
+
+.mutah-page .mutah-haze {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 160px;
+    background: linear-gradient(
+        180deg,
+        transparent,
+        #ead1a655
+    );
+}
+
+.mutah-page .mutah-mountain {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.mutah-page .mountain-one {
+    top: 115px;
+    left: -80px;
+    width: 570px;
+    height: 180px;
+    background: #95846e;
+    clip-path: polygon(
+        0 100%,
+        12% 57%,
+        23% 82%,
+        40% 9%,
+        58% 64%,
+        72% 30%,
+        100% 100%
+    );
+}
+
+.mutah-page .mountain-two {
+    top: 92px;
+    left: 290px;
+    width: 500px;
+    height: 202px;
+    background: #877460;
+    clip-path: polygon(
+        0 100%,
+        22% 42%,
+        36% 67%,
+        53% 7%,
+        74% 59%,
+        86% 33%,
+        100% 100%
+    );
+}
+
+.mutah-page .mountain-three {
+    top: 138px;
+    right: -90px;
+    width: 450px;
+    height: 154px;
+    background: #71634f;
+    clip-path: polygon(
+        0 100%,
+        23% 48%,
+        38% 75%,
+        53% 12%,
+        75% 67%,
+        100% 100%
+    );
+}
+
+.mutah-page .mutah-cliff {
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.mutah-page .cliff-left {
+    top: 215px;
+    left: -50px;
+    width: 140px;
+    height: 145px;
+    background: #86684d;
+    clip-path: polygon(
+        0 0,
+        67% 0,
+        83% 20%,
+        72% 40%,
+        100% 55%,
+        65% 80%,
+        57% 100%,
+        0 100%
+    );
+}
+
+.mutah-page .cliff-right {
+    top: 200px;
+    right: -45px;
+    width: 123px;
+    height: 165px;
+    background: #765e49;
+    clip-path: polygon(
+        30% 0,
+        100% 0,
+        100% 100%,
+        15% 100%,
+        0 75%,
+        23% 50%,
+        6% 24%
+    );
+}
+
+.mutah-page .mutah-ground {
+    position: absolute;
+    top: 265px;
+    left: -100px;
+    right: -100px;
+    bottom: -160px;
+    z-index: 3;
+    border-radius: 49% 49% 0 0;
+    background: linear-gradient(
+        180deg,
+        #d8b58a,
+        #bf9770 65%,
+        #a67d5d
+    );
+    box-shadow: inset 0 16px 25px #f3d2a96b;
+}
+
+.mutah-page .mutah-sand {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    background-image: radial-gradient(
+        #664a3740 1px,
+        transparent 1px
+    );
+    background-size: 20px 20px;
+    pointer-events: none;
+}
+
+.mutah-page .mutah-valley-track {
+    position: absolute;
+    top: 325px;
+    left: 42px;
+    z-index: 4;
+    width: 915px;
+    height: 165px;
+    border-top: 4px dotted #98704c9c;
+    border-radius: 50%;
+    transform: rotate(-1.5deg);
+    pointer-events: none;
+}
+
+.mutah-page .mutah-valley-track.track-two {
+    top: 407px;
+    left: 105px;
+    width: 790px;
+    height: 120px;
+    border-top-color: #a37b5491;
+    transform: rotate(3deg);
+}
+
+.mutah-page .mutah-rock {
+    position: absolute;
+    z-index: 5;
+    width: 47px;
+    height: 27px;
+    border-radius: 55% 43% 48% 39%;
+    background: #84694f;
+    box-shadow: 5px 6px #604b3b;
+    pointer-events: none;
+}
+
+.mutah-page .rock-one {
+    top: 315px;
+    left: 47px;
+}
+
+.mutah-page .rock-two {
+    top: 457px;
+    left: 270px;
+    transform: scale(.7);
+}
+
+.mutah-page .rock-three {
+    top: 324px;
+    right: 43px;
+    transform: scale(.8);
+}
+
+.mutah-page .rock-four {
+    bottom: 75px;
+    right: 150px;
+}
+
+.mutah-page .rock-five {
+    bottom: 90px;
+    left: 76px;
+    transform: scale(.58);
+}
+
+.mutah-page .mutah-shrub {
+    position: absolute;
+    z-index: 5;
+    width: 36px;
+    height: 20px;
+    background: #6d7950;
+    clip-path: polygon(
+        0 100%,
+        15% 34%,
+        34% 100%,
+        49% 0,
+        65% 100%,
+        88% 29%,
+        100% 100%
+    );
+    opacity: .85;
+    pointer-events: none;
+}
+
+.mutah-page .shrub-one {
+    top: 275px;
+    left: 103px;
+}
+
+.mutah-page .shrub-two {
+    top: 287px;
+    right: 245px;
+    transform: scale(.75);
+}
+
+.mutah-page .shrub-three {
+    bottom: 67px;
+    right: 39px;
+}
+
+.mutah-page .mutah-camp {
+    position: absolute;
+    top: 227px;
+    right: 75px;
+    z-index: 5;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    pointer-events: none;
+}
+
+.mutah-page .mutah-tent {
+    width: 39px;
+    height: 40px;
+    background: #8b5b49;
+    clip-path: polygon(
+        50% 0,
+        100% 100%,
+        0 100%
+    );
+    filter: drop-shadow(3px 4px 2px #49332566);
+}
+
+.mutah-page .tent-two {
+    width: 55px;
+    height: 55px;
+    background: #a66f52;
+}
+
+.mutah-page .tent-three {
+    height: 35px;
+    background: #745440;
+}
+
+.mutah-page .mutah-camp-flag {
+    position: absolute;
+    top: -29px;
+    left: 74px;
+    width: 3px;
+    height: 58px;
+    background: #694832;
+}
+
+.mutah-page .mutah-camp-flag::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 3px;
+    width: 25px;
+    height: 16px;
+    background: #96463d;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        85% 50%,
+        100% 100%,
+        0 100%
+    );
+}
+
+.mutah-page .mutah-expedition-tag,
+.mutah-page .mutah-date-tag,
+.mutah-page .mutah-landmark {
+    position: absolute;
+    z-index: 20;
+    border: 1px solid #e5c794;
+    border-radius: 9px;
+    color: #ffecc4;
+    box-shadow: 0 5px 13px #48301e4d;
+    pointer-events: none;
+}
+
+.mutah-page .mutah-expedition-tag {
+    top: 18px;
+    left: 20px;
+    padding: 12px 15px;
+    background: #234b38;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .6px;
+}
+
+.mutah-page .mutah-date-tag {
+    top: 19px;
+    right: 22px;
+    padding: 9px 12px;
+    background: #70553edc;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .7px;
+}
+
+.mutah-page .mutah-landmark {
+    top: 177px;
+    left: 24px;
+    padding: 8px 11px;
+    background: #725940e8;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.mutah-page .mutah-story-card {
+    position: absolute;
+    top: 67px;
+    left: 50%;
+    z-index: 21;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 360px;
+    min-height: 71px;
+    padding: 12px 16px;
+    border: 1px solid #ebcd96;
+    border-radius: 11px;
+    background: #214b39f5;
+    color: #ffedc9;
+    box-shadow: 0 7px 17px #48322166;
+    text-align: center;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.mutah-page .mutah-story-card span {
+    color: #eac68c;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.mutah-page .mutah-story-card strong {
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.mutah-page .mutah-command-chain {
+    position: absolute;
+    top: 148px;
+    left: 50%;
+    z-index: 20;
+    width: 354px;
+    padding: 9px 11px 11px;
+    border: 1px solid #c7a77b;
+    border-radius: 10px;
+    background: #1d4232ee;
+    text-align: center;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.mutah-page .mutah-command-heading {
+    margin-bottom: 9px;
+    color: #eaca93;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+}
+
+.mutah-page .mutah-command-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.mutah-page .command-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 3px;
+    border: 1px solid #bca47c55;
+    border-radius: 7px;
+    background: #5b54434d;
+    color: #c6c7b7;
+    opacity: .65;
+    transition:
+        background .25s ease,
+        opacity .25s ease,
+        border-color .25s ease;
+}
+
+.mutah-page .command-item b {
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #6a5b42;
+    color: #f0d2a0;
+    font-size: 10px;
+}
+
+.mutah-page .command-item span {
+    font-size: 8px;
+    font-weight: 900;
+}
+
+.mutah-page .command-item.active {
+    border-color: #f0d398;
+    background: #327050;
+    color: #fff0c9;
+    opacity: 1;
+    box-shadow: 0 0 12px #f3d9a334;
+}
+
+.mutah-page .command-item.active b {
+    background: #efd08e;
+    color: #25513b;
+}
+
+.mutah-page .command-item.passed {
+    border-color: #bca47c;
+    background: #544d3b;
+    opacity: .83;
+}
+
+.mutah-page .mutah-army-label {
+    position: absolute;
+    top: 255px;
+    z-index: 18;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 185px;
+    min-height: 55px;
+    padding: 11px 12px;
+    border: 1px solid #ecd09b;
+    border-radius: 10px;
+    box-shadow: 0 5px 14px #4d311f68;
+    color: #ffedc9;
+    text-align: center;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+.mutah-page .mutah-army-label.muslim {
+    left: 205px;
+    background: #24573e;
+}
+
+.mutah-page .mutah-army-label.enemy {
+    left: 793px;
+    background: #82463d;
+}
+
+.mutah-page .mutah-army-label strong {
+    font-size: 10px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.mutah-page .mutah-army-label span {
+    color: #eed9b5;
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+.mutah-page .mutah-unit-layer,
+.mutah-page .mutah-effects-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.mutah-page #muslimLayer,
+.mutah-page #enemyLayer {
+    z-index: 11;
+}
+
+.mutah-page #effectsLayer {
+    z-index: 14;
+}
+
+.mutah-page .mutah-unit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    margin: -9px;
+    border: 2px solid #fff0d1;
+    border-radius: 50%;
+    box-shadow:
+        0 3px 6px #3c281d8e,
+        inset 0 -2px #00000022;
+    will-change: transform, opacity;
+}
+
+.mutah-page .mutah-unit.muslim {
+    background: #248a56;
+}
+
+.mutah-page .mutah-unit.enemy {
+    background: #bd5045;
+}
+
+.mutah-page .mutah-standard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 17;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+.mutah-page .mutah-standard .standard-pole {
+    position: absolute;
+    bottom: 0;
+    left: -2px;
+    width: 4px;
+    height: 68px;
+    border-radius: 2px;
+    background: linear-gradient(
+        90deg,
+        #65442d,
+        #e3b87c,
+        #6e4c34
+    );
+    box-shadow: 2px 2px 4px #51352078;
+}
+
+.mutah-page .mutah-standard .standard-cloth {
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 43px;
+    height: 24px;
+    border: 1px solid #f3d8a4;
+    border-radius: 0 4px 4px 0;
+    background: linear-gradient(
+        90deg,
+        #155b38,
+        #39ac6b,
+        #1c7245
+    );
+    box-shadow: 2px 3px 5px #51341d6b;
+    transform-origin: left center;
+    animation: mutahFlagWave 1.5s ease-in-out infinite;
+}
+
+.mutah-page .mutah-standard.enemy-standard
+.standard-cloth {
+    background: linear-gradient(
+        90deg,
+        #8c352f,
+        #d65e50,
+        #973c35
+    );
+}
+
+.mutah-page .mutah-standard .standard-pawn {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #ffedc6;
+    border-radius: 50%;
+    background: #218952;
+    box-shadow:
+        0 0 0 3px #eed09266,
+        0 4px 8px #38261d8c;
+}
+
+.mutah-page .mutah-standard.enemy-standard
+.standard-pawn {
+    background: #bd4b42;
+}
+
+@keyframes mutahFlagWave {
+    0%, 100% {
+        transform: skewY(0deg);
+    }
+
+    50% {
+        transform: skewY(-8deg);
+    }
+}
+
+.mutah-page .mutah-leader-badge {
+    position: absolute;
+    top: -116px;
+    left: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 177px;
+    padding: 10px 10px;
+    border: 1px solid #f0d398;
+    border-radius: 9px;
+    background: #22533df6;
+    color: #fff0c8;
+    text-align: center;
+    box-shadow: 0 6px 15px #442d2066;
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+.mutah-page .mutah-leader-badge small {
+    color: #e6c590;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .5px;
+}
+
+.mutah-page .mutah-leader-badge strong {
+    font-size: 10px;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+.mutah-page .mutah-field[data-scene="jafar"]
+.mutah-leader-badge,
+.mutah-page .mutah-field[data-scene="rawaha"]
+.mutah-leader-badge,
+.mutah-page .mutah-field[data-scene="thabit"]
+.mutah-leader-badge,
+.mutah-page .mutah-field[data-scene="khalid"]
+.mutah-leader-badge,
+.mutah-page .mutah-field[data-scene="reform"]
+.mutah-leader-badge {
+    opacity: 1;
+}
+
+.mutah-page .mutah-handover-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 18;
+    display: grid;
+    place-items: center;
+    width: 76px;
+    height: 76px;
+    margin: -38px;
+    border: 2px solid #ffecae;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        #ffe2a78c,
+        #f7d4952c 68%,
+        transparent
+    );
+    color: #fff7d8;
+    font-size: 31px;
+    opacity: 0;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+.mutah-page .mutah-impact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 13;
+    width: 95px;
+    height: 95px;
+    margin: -47.5px;
+    border: 3px solid #ffe2a0;
+    border-radius: 50%;
+    box-shadow: 0 0 19px #f5cd8277;
+    opacity: 0;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+.mutah-page .mutah-spark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ffe9ab;
+    box-shadow: 0 0 8px #ffe2a6;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mutah-page .mutah-dust {
+    position: absolute;
+    z-index: 9;
+    width: 155px;
+    height: 105px;
+    border-radius: 50%;
+    background: #ead0a087;
+    filter: blur(19px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mutah-page .dust-one {
+    top: 324px;
+    left: 410px;
+}
+
+.mutah-page .dust-two {
+    top: 365px;
+    left: 512px;
+}
+
+.mutah-page .mutah-field[data-scene="clash"]
+.mutah-dust,
+.mutah-page .mutah-field[data-scene="jafar"]
+.mutah-dust,
+.mutah-page .mutah-field[data-scene="rawaha"]
+.mutah-dust,
+.mutah-page .mutah-field[data-scene="thabit"]
+.mutah-dust,
+.mutah-page .mutah-field[data-scene="reform"]
+.mutah-dust {
+    opacity: .7;
+    animation: mutahDustPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes mutahDustPulse {
+    0%, 100% {
+        transform: scale(.8);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+.mutah-page .mutah-handover-notice,
+.mutah-page .mutah-strategy-panel {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    z-index: 23;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 390px;
+    min-height: 76px;
+    padding: 12px 15px;
+    border: 2px solid #efce94;
+    border-radius: 11px;
+    background: #24513df6;
+    color: #fff0c8;
+    box-shadow: 0 8px 18px #44302067;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -12px);
+    pointer-events: none;
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+}
+
+.mutah-page .mutah-handover-notice > span,
+.mutah-page .strategy-icon {
+    flex-shrink: 0;
+    color: #ffdf9d;
+    font-size: 26px;
+}
+
+.mutah-page .mutah-handover-notice strong,
+.mutah-page .mutah-strategy-panel strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.mutah-page .mutah-handover-notice small,
+.mutah-page .mutah-strategy-panel span {
+    display: block;
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+.mutah-page .mutah-field[data-scene="jafar"]
+.mutah-handover-notice,
+.mutah-page .mutah-field[data-scene="rawaha"]
+.mutah-handover-notice,
+.mutah-page .mutah-field[data-scene="thabit"]
+.mutah-handover-notice,
+.mutah-page .mutah-field[data-scene="khalid"]
+.mutah-handover-notice {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.mutah-page .mutah-field[data-scene="reform"]
+.mutah-strategy-panel,
+.mutah-page .mutah-field[data-scene="withdraw"]
+.mutah-strategy-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.mutah-page .mutah-field[data-scene="jafar"]
+.mutah-story-card,
+.mutah-page .mutah-field[data-scene="rawaha"]
+.mutah-story-card,
+.mutah-page .mutah-field[data-scene="thabit"]
+.mutah-story-card,
+.mutah-page .mutah-field[data-scene="khalid"]
+.mutah-story-card,
+.mutah-page .mutah-field[data-scene="reform"]
+.mutah-story-card,
+.mutah-page .mutah-field[data-scene="withdraw"]
+.mutah-story-card {
+    opacity: 0;
+}
+
+.mutah-page .mutah-field[data-scene="clash"]
+.mutah-army-label,
+.mutah-page .mutah-field[data-scene="jafar"]
+.mutah-army-label,
+.mutah-page .mutah-field[data-scene="rawaha"]
+.mutah-army-label,
+.mutah-page .mutah-field[data-scene="thabit"]
+.mutah-army-label,
+.mutah-page .mutah-field[data-scene="reform"]
+.mutah-army-label {
+    opacity: 0;
+}
+
+.mutah-page .standard-dot {
+    border: 2px solid #f9db9e;
+    background: #258d54;
+    box-shadow: 0 0 7px #f4d493;
+}
+
+.mutah-page .battle-legend {
+    bottom: 64px;
+    left: 18px;
+}
+
+.mutah-page .battle-hint {
+    bottom: 16px;
+    min-width: 525px;
+    max-width: 760px;
+}
+
+.mutah-page .scene-progress {
+    z-index: 25;
+}
+
+.mutah-page .start-overlay,
+.mutah-page .quiz-overlay,
+.mutah-page .result-overlay,
+.mutah-page .reward-overlay {
+    z-index: 40;
+}
+
+.mutah-page .hidden {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .mutah-page .battle-scroll {
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+
+    .mutah-page .mutah-field {
+        flex: 0 0 1000px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mutah-page .standard-cloth,
+    .mutah-page .mutah-dust {
+        animation: none !important;
+    }
+}

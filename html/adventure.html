@@ -1,0 +1,921 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b2119">
+
+    <title>Peta Petualangan | Islam Story</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/adventure.css">
+</head>
+
+<body class="adventure-page">
+
+<header class="header">
+    <div class="container navbar">
+        <a href="index.html" class="brand">
+            <div class="brand-icon">☪</div>
+            <div class="brand-text">
+                <strong>ISLAM STORY</strong>
+                <small>EKSPEDISI KUIS SEJARAH</small>
+            </div>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="adventure.html" class="active">Petualangan</a>
+            <a href="about.html">Tentang</a>
+        </nav>
+
+        <a href="index.html" class="nav-button">
+            ← Beranda
+        </a>
+    </div>
+</header>
+
+<main>
+    <section class="expedition-intro">
+        <div
+            class="hero-stars"
+            id="heroStars"
+            aria-hidden="true">
+        </div>
+
+        <div
+            class="hero-orbit orbit-one"
+            aria-hidden="true">
+        </div>
+
+        <div
+            class="hero-orbit orbit-two"
+            aria-hidden="true">
+        </div>
+
+        <div
+            class="hero-orbit orbit-three"
+            aria-hidden="true">
+        </div>
+
+        <div
+            class="hero-glow glow-one"
+            aria-hidden="true">
+        </div>
+
+        <div
+            class="hero-glow glow-two"
+            aria-hidden="true">
+        </div>
+
+        <div class="container adventure-hero-layout">
+
+            <div class="adventure-hero-content">
+                <div class="hero-eyebrow">
+                    <span class="eyebrow-star">✦</span>
+                    JELAJAH SEJARAH ISLAM
+                    <span class="eyebrow-line"></span>
+                </div>
+
+                <h1>
+                    Mulai
+                    <span>Petualangan</span>
+                    Sejarahmu.
+                </h1>
+
+                <p class="hero-description">
+                    Jelajahi sepuluh ekspedisi sejarah Islam
+                    dalam dua dunia petualangan.
+                    Amati animasinya, pecahkan tantangannya,
+                    dan ungkap nama peristiwa setelah
+                    menjawab kuis.
+                </p>
+
+                <div class="hero-actions">
+                    <a
+                        href="#peta-petualangan"
+                        class="hero-primary">
+                        Jelajahi Peta
+                        <span>↗</span>
+                    </a>
+
+                    <a
+                        href="#cara-bermain"
+                        class="hero-secondary">
+                        Cara Bermain
+                        <span>↓</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>10</strong>
+                        <span>LEVEL</span>
+                    </div>
+
+                    <div class="hero-stat">
+                        <strong>02</strong>
+                        <span>DUNIA</span>
+                    </div>
+
+                    <div class="hero-stat">
+                        <strong id="campaignProgress">0%</strong>
+                        <span>PROGRES</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="adventure-hero-visual">
+                <div class="visual-halo halo-outer"></div>
+                <div class="visual-halo halo-inner"></div>
+
+                <div class="visual-spark visual-spark-one">
+                    ✦
+                </div>
+
+                <div class="visual-spark visual-spark-two">
+                    ✧
+                </div>
+
+                <div class="visual-spark visual-spark-three">
+                    ✦
+                </div>
+
+                <div class="visual-medallion">
+                    <div class="medallion-crescent">
+                        ☪
+                    </div>
+
+                    <span>MENJELAJAHI</span>
+                    <strong>JEJAK SEJARAH</strong>
+                </div>
+
+                <div class="journey-preview">
+                    <div class="preview-heading">
+                        <span>PERJALANANMU</span>
+
+                        <span class="preview-indicator">
+                            <i></i>
+                            MULAI DI SINI
+                        </span>
+                    </div>
+
+                    <div class="preview-stop">
+                        <div class="preview-number completed">
+                            01
+                        </div>
+
+                        <div>
+                            <small>LEVEL PERTAMA</small>
+                            <strong>Ekspedisi 01</strong>
+                            <span>Uji pengetahuan sejarahmu</span>
+                        </div>
+
+                        <span class="preview-icon">✦</span>
+                    </div>
+
+                    <div class="preview-connector"></div>
+
+                    <div class="preview-stop">
+                        <div
+                            class="preview-number second"
+                            id="previewLevelTwo">
+                            02
+                        </div>
+
+                        <div>
+                            <small>LEVEL KEDUA</small>
+                            <strong>Ekspedisi 02</strong>
+                            <span>Petualangan berikutnya</span>
+                        </div>
+
+                        <span
+                            class="preview-icon"
+                            id="previewSecondIcon">
+                            🔒
+                        </span>
+                    </div>
+
+                    <div class="preview-footer">
+                        <span>PROGRES PETUALANGAN</span>
+
+                        <strong id="previewProgress">
+                            0 DARI 10 SELESAI
+                        </strong>
+                    </div>
+                </div>
+
+                <div class="visual-floating-label">
+                    <span>✧</span>
+                    SELANGKAH DEMI SELANGKAH
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-bottom-line">
+            <div class="container hero-bottom-content">
+                <span>
+                    ✦ SETIAP EKSPEDISI MEMBAWA
+                    PENGETAHUAN BARU
+                </span>
+
+                <span>
+                    GESER KE BAWAH UNTUK MEMULAI ↓
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="game-information"
+        id="cara-bermain">
+
+        <div class="container info-layout">
+            <div class="info-main">
+                <span class="section-eyebrow">
+                    <span>✦</span>
+                    PANDUAN PETUALANGAN
+                </span>
+
+                <h2>
+                    Sepuluh Ekspedisi,
+                    <span>Beragam Kisah.</span>
+                </h2>
+
+                <p>
+                    Setiap level menampilkan animasi
+                    peristiwa sejarah Islam.
+                    Tugasmu mengamati jalannya peristiwa
+                    dan menentukan jawabannya.
+                </p>
+
+                <div class="info-highlight">
+                    <span>✧</span>
+
+                    <p>
+                        Nama peristiwa tidak ditampilkan
+                        sebelum kuis. Perhatikan taktik,
+                        posisi pasukan, dan perubahan
+                        keadaan untuk menemukan jawabannya.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-rules">
+                <div class="rules-heading">
+                    <span>LANGKAH PETUALANGAN</span>
+                    <strong>Bagaimana Cara Bermain?</strong>
+                </div>
+
+                <div class="rule">
+                    <div class="rule-icon">01</div>
+
+                    <div>
+                        <strong>Pilih Ekspedisi</strong>
+                        <p>
+                            Klik level yang sudah
+                            terbuka pada peta.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rule">
+                    <div class="rule-icon">02</div>
+
+                    <div>
+                        <strong>Amati Animasi</strong>
+                        <p>
+                            Saksikan peristiwa sejarah
+                            dan perhatikan petunjuknya.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rule">
+                    <div class="rule-icon">03</div>
+
+                    <div>
+                        <strong>Jawab Kuis</strong>
+                        <p>
+                            Tebak nama peristiwa
+                            sebelum waktu habis.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rule">
+                    <div class="rule-icon">04</div>
+
+                    <div>
+                        <strong>Buka Level Berikutnya</strong>
+                        <p>
+                            Jawab benar untuk menonton
+                            hadiah dan membuka ekspedisi baru.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="expedition-section"
+        id="peta-petualangan">
+
+        <div class="container expedition-heading">
+            <div>
+                <span class="section-eyebrow">
+                    ✦ PETA PETUALANGAN
+                </span>
+
+                <h2>Pilih Ekspedisimu</h2>
+
+                <p>
+                    Sepuluh tantangan dalam
+                    dua dunia petualangan.
+                </p>
+            </div>
+
+            <div class="map-scroll-hint">
+                <span>↔</span>
+                GESER PETA KE KANAN
+            </div>
+        </div>
+
+        <div
+            class="map-scroll"
+            id="mapScroll"
+            tabindex="0"
+            aria-label="Peta petualangan berisi sepuluh ekspedisi">
+
+            <div class="map-world">
+                <div class="world desert-world">
+                    <div class="world-title">
+                        <small>DUNIA 01</small>
+                        <h3>Gurun Keemasan</h3>
+                        <p>LEVEL 01 — 05</p>
+                    </div>
+
+                    <div class="desert-sun"></div>
+
+                    <div class="dune dune-one"></div>
+                    <div class="dune dune-two"></div>
+                    <div class="dune dune-three"></div>
+                    <div class="dune dune-four"></div>
+
+                    <div class="sand-stones stones-one"></div>
+                    <div class="sand-stones stones-two"></div>
+                    <div class="sand-stones stones-three"></div>
+
+                    <div class="ancient-city city-one">
+                        <div class="tower"></div>
+
+                        <div class="palace">
+                            <div class="dome"></div>
+                            <div class="door"></div>
+                        </div>
+
+                        <div class="tower"></div>
+                    </div>
+
+                    <div class="ancient-gate">
+                        <div class="gate-side"></div>
+                        <div class="gate-center"></div>
+                        <div class="gate-side"></div>
+                    </div>
+
+                    <div class="oasis oasis-one"></div>
+
+                    <div class="palm palm-one">🌴</div>
+                    <div class="palm palm-two">🌴</div>
+                    <div class="palm palm-three">🌴</div>
+
+                    <div class="landmark-label desert-landmark">
+                        KOTA GURUN BERSEJARAH
+                    </div>
+                </div>
+
+                <div class="world valley-world">
+                    <div class="world-title">
+                        <small>DUNIA 02</small>
+                        <h3>Lembah Zamrud</h3>
+                        <p>LEVEL 06 — 10</p>
+                    </div>
+
+                    <div class="valley-sun"></div>
+
+                    <div class="cloud cloud-one"></div>
+                    <div class="cloud cloud-two"></div>
+
+                    <div class="mountain mountain-one"></div>
+                    <div class="mountain mountain-two"></div>
+                    <div class="mountain mountain-three"></div>
+
+                    <div class="green-hill hill-one"></div>
+                    <div class="green-hill hill-two"></div>
+
+                    <div class="river"></div>
+
+                    <div class="tree tree-one">🌳</div>
+                    <div class="tree tree-two">🌳</div>
+                    <div class="tree tree-three">🌲</div>
+                    <div class="tree tree-four">🌳</div>
+
+                    <div class="valley-fortress">
+                        <div class="fort-tower"></div>
+
+                        <div class="fort-main">
+                            <div class="fort-dome"></div>
+                            <div class="fort-door"></div>
+                        </div>
+
+                        <div class="fort-tower"></div>
+                    </div>
+
+                    <div class="landmark-label valley-landmark">
+                        KOTA DI DATARAN TINGGI
+                    </div>
+                </div>
+
+                <svg
+                    class="journey-road"
+                    viewBox="0 0 3200 700"
+                    preserveAspectRatio="none"
+                    aria-hidden="true">
+
+                    <defs>
+                        <path
+                            id="journeyPath"
+                            d="M170 455
+                               C280 455 290 280 440 280
+                               S620 455 740 455
+                               S930 280 1040 280
+                               S1220 440 1350 440
+                               S1520 290 1650 290
+                               S1840 445 1950 445
+                               S2130 285 2260 285
+                               S2440 430 2570 430
+                               S2750 285 2870 285
+                               L3050 350">
+                        </path>
+                    </defs>
+
+                    <use
+                        href="#journeyPath"
+                        class="road-edge">
+                    </use>
+
+                    <use
+                        href="#journeyPath"
+                        class="road-sand">
+                    </use>
+
+                    <use
+                        href="#journeyPath"
+                        class="road-dashes">
+                    </use>
+                </svg>
+
+                <div class="world-transition">
+                    <span>
+                        ✦ WILAYAH BERIKUTNYA ✦
+                    </span>
+
+                    <strong>LEMBAH ZAMRUD</strong>
+                </div>
+
+                <a
+                    href="level1.html"
+                    class="stage stage-1 available"
+                    aria-label="Mainkan Ekspedisi 01">
+
+                    <div class="stage-circle">1</div>
+                    <strong>LEVEL 01</strong>
+                    <span>Ekspedisi 01</span>
+                </a>
+
+                <a
+                    id="level2Stage"
+                    class="stage stage-2 locked"
+                    aria-label="Ekspedisi 02 terkunci"
+                    aria-disabled="true"
+                    tabindex="-1">
+
+                    <div class="stage-circle">🔒</div>
+                    <strong>LEVEL 02</strong>
+                    <span>Ekspedisi 02</span>
+                </a>
+
+                <a
+                    id="level3Stage"
+                    class="stage stage-3 locked"
+                    aria-label="Ekspedisi 03 terkunci"
+                    aria-disabled="true"
+                    tabindex="-1">
+
+                    <div class="stage-circle">🔒</div>
+                    <strong>LEVEL 03</strong>
+                    <span>Ekspedisi 03</span>
+                </a>
+
+                <a
+                    id="level4Stage"
+                    class="stage stage-4 locked"
+                    aria-label="Ekspedisi 04 terkunci"
+                    aria-disabled="true"
+                    tabindex="-1">
+
+                    <div class="stage-circle">🔒</div>
+                    <strong>LEVEL 04</strong>
+                    <span>Ekspedisi 04</span>
+                </a>
+
+                
+                <a
+                    id="level5Stage"
+                    class="stage stage-5 locked"
+                    aria-label="Ekspedisi 05 terkunci"
+                    aria-disabled="true"
+                    tabindex="-1">
+
+                    <div class="stage-circle">🔒</div>
+                    <strong>LEVEL 05</strong>
+                    <span>Ekspedisi 05</span>
+                </a>
+
+                <div class="stage stage-6 locked">
+                    <div class="stage-circle">🔒</div>
+                    <strong>LEVEL 06</strong>
+                    <span>Ekspedisi 06</span>
+                </div>
+
+                <div class="stage stage-7 locked">
+                    <div class="stage-circle">🔒</div>
+                    <strong>LEVEL 07</strong>
+                    <span>Ekspedisi 07</span>
+                </div>
+
+                <div class="stage stage-8 locked">
+                    <div class="stage-circle">🔒</div>
+                    <strong>LEVEL 08</strong>
+                    <span>Ekspedisi 08</span>
+                </div>
+
+                <div class="stage stage-9 locked">
+                    <div class="stage-circle">🔒</div>
+                    <strong>LEVEL 09</strong>
+                    <span>Ekspedisi 09</span>
+                </div>
+
+                <div class="stage stage-10 locked">
+                    <div class="stage-circle">🔒</div>
+                    <strong>LEVEL 10</strong>
+                    <span>Ekspedisi 10</span>
+                </div>
+
+                <div class="finish-sign">
+                    ✦ TUJUAN AKHIR
+                </div>
+
+                <div class="map-signature">
+                    ISLAM STORY — DIBUAT OLEH PALPET
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="map-instruction">
+                <div>
+                    <span class="instruction-eyebrow">
+                        PETUALANGANMU
+                    </span>
+
+                    <strong>
+                        Siap Memulai Ekspedisi?
+                    </strong>
+
+                    <p id="mapGuide">
+                        Klik Ekspedisi 01 untuk memulai.
+                        Selesaikan kuis untuk membuka
+                        ekspedisi berikutnya.
+                    </p>
+                </div>
+
+                <div class="map-status" id="mapStatus">
+                    1 TERSEDIA • 9 TERKUNCI
+                </div>
+            </div>
+
+            <p
+                class="prototype-note"
+                id="prototypeNote">
+                Level 01–04 dibuka bertahap.
+                Level 05–10 masih dalam pengembangan.
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <h2>
+                    ☪ ISLAM STORY<span>.</span>
+                </h2>
+
+                <p>
+                    Permainan kuis edukatif untuk
+                    mengenal sejarah Islam melalui
+                    animasi dan tantangan interaktif.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>JELAJAHI</h4>
+                <a href="index.html">Beranda</a>
+                <a href="adventure.html">Petualangan</a>
+                <a href="about.html">Tentang</a>
+            </div>
+
+            <div class="footer-credit">
+                <h4>PEMBUAT PROYEK</h4>
+                <p>Dirancang dan dibuat oleh</p>
+                <strong>PALPET.</strong>
+                <span>© 2026</span>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>
+                © 2026 ISLAM STORY.
+                HAK CIPTA DILINDUNGI.
+            </span>
+
+            <span>DIBUAT OLEH PALPET ✦</span>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const get = id => document.getElementById(id);
+
+    const starsContainer = get("heroStars");
+
+    if (starsContainer) {
+        starsContainer.replaceChildren();
+
+        for (let i = 0; i < 52; i++) {
+            const star = document.createElement("span");
+
+            const size =
+                i % 8 === 0
+                    ? 6
+                    : i % 3 === 0
+                        ? 4
+                        : 2;
+
+            star.className = "twinkle-star";
+
+            star.style.left =
+                (i * 37.7 + 13) % 100 + "%";
+
+            star.style.top =
+                (i * 23.9 + 7) % 100 + "%";
+
+            star.style.width = size + "px";
+            star.style.height = size + "px";
+
+            star.style.animationDuration =
+                2.1 + (i % 7) * .47 + "s";
+
+            star.style.animationDelay =
+                (i % 11) * -.41 + "s";
+
+            starsContainer.appendChild(star);
+        }
+    }
+
+    const progressKey = "islamStoryUnlockedLevel";
+
+    function getUnlockedLevel() {
+        const prefix = progressKey + "=";
+
+        const saved = document.cookie
+            .split(";")
+            .map(item => item.trim())
+            .find(item => item.startsWith(prefix));
+
+        if (!saved) {
+            return 1;
+        }
+
+        const level = Number.parseInt(
+            saved.slice(prefix.length),
+            10
+        );
+
+        if (!Number.isFinite(level)) {
+            return 1;
+        }
+
+        return Math.max(
+            1,
+            Math.min(6, level)
+        );
+    }
+
+    const unlockedLevel = getUnlockedLevel();
+
+    function setStage(id, level) {
+        const stage = get(id);
+
+        if (!stage) {
+            return;
+        }
+
+        const circle = stage.querySelector(
+            ".stage-circle"
+        );
+
+        const label =
+            "Ekspedisi " +
+            String(level).padStart(2, "0");
+
+        const available =
+            unlockedLevel >= level;
+
+        if (available) {
+            stage.href =
+                "level" + level + ".html";
+
+            stage.classList.remove("locked");
+            stage.classList.add("available");
+
+            stage.removeAttribute("aria-disabled");
+            stage.removeAttribute("tabindex");
+
+            stage.setAttribute(
+                "aria-label",
+                "Mainkan " + label
+            );
+
+            if (circle) {
+                circle.textContent =
+                    String(level);
+            }
+        } else {
+            stage.removeAttribute("href");
+
+            stage.classList.remove("available");
+            stage.classList.add("locked");
+
+            stage.setAttribute(
+                "aria-disabled",
+                "true"
+            );
+
+            stage.setAttribute(
+                "tabindex",
+                "-1"
+            );
+
+            stage.setAttribute(
+                "aria-label",
+                label + " terkunci"
+            );
+
+            if (circle) {
+                circle.textContent = "🔒";
+            }
+        }
+    }
+
+    setStage("level2Stage", 2);
+    setStage("level3Stage", 3);
+    setStage("level4Stage", 4);
+    setStage("level5Stage", 5);
+
+    const completedLevels = Math.min(
+        5,
+        Math.max(0, unlockedLevel - 1)
+    );
+
+    const availableLevels = Math.min(
+        5,
+        unlockedLevel
+    );
+
+    const percentage = completedLevels * 10;
+
+    const campaignProgress = get(
+        "campaignProgress"
+    );
+
+    const previewProgress = get(
+        "previewProgress"
+    );
+
+    const mapStatus = get(
+        "mapStatus"
+    );
+
+    const mapGuide = get(
+        "mapGuide"
+    );
+
+    const prototypeNote = get(
+        "prototypeNote"
+    );
+
+    if (campaignProgress) {
+        campaignProgress.textContent =
+            percentage + "%";
+    }
+
+    if (previewProgress) {
+        previewProgress.textContent =
+            completedLevels +
+            " DARI 10 SELESAI";
+    }
+
+    if (mapStatus) {
+        mapStatus.textContent =
+            availableLevels +
+            " TERSEDIA • " +
+            (10 - availableLevels) +
+            " TERKUNCI";
+    }
+
+    const previewLevelTwo = get(
+        "previewLevelTwo"
+    );
+
+    const previewSecondIcon = get(
+        "previewSecondIcon"
+    );
+
+    if (previewLevelTwo) {
+        previewLevelTwo.classList.toggle(
+            "unlocked",
+            unlockedLevel >= 2
+        );
+    }
+
+    if (previewSecondIcon) {
+        previewSecondIcon.textContent =
+            unlockedLevel >= 2
+                ? "✦"
+                : "🔒";
+    }
+
+    const guides = {
+        1:
+            "Mulai Ekspedisi 01. " +
+            "Jawab benar untuk membuka Ekspedisi 02.",
+
+        2:
+            "Ekspedisi 02 sudah terbuka. " +
+            "Selesaikan kuis untuk melanjutkan.",
+
+        3:
+            "Ekspedisi 03 sudah terbuka. " +
+            "Lanjutkan perjalanan sejarahmu.",
+
+        4:
+            "Ekspedisi 04 sudah terbuka. " +
+            "Selesaikan kuis untuk membuka Ekspedisi 05.",
+
+        5:
+            "Ekspedisi 05 sudah terbuka! " +
+            "Amati pergantian panji dan jawab kuis terakhir " +
+            "yang tersedia saat ini.",
+
+        6:
+            "Selamat! Lima ekspedisi sudah selesai. " +
+            "Kamu bisa memainkan kembali Level 01 sampai 05."
+    };
+
+    if (mapGuide) {
+        mapGuide.textContent =
+            guides[unlockedLevel];
+    }
+
+    if (prototypeNote) {
+        prototypeNote.textContent =
+            unlockedLevel >= 6
+                ? "Progres 50% tersimpan. " +
+                  "Level 06 sampai 10 masih dalam pengembangan."
+                : "Level 01 sampai 05 tersedia " +
+                  "secara bertahap. Level 06 sampai 10 " +
+                  "masih dalam pengembangan.";
+    }
+});
+</script>
+
+
+</body>
+</html>

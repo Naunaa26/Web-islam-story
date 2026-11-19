@@ -1,0 +1,888 @@
+
+@import url("./level2.css");
+
+.khandaq-page .khandaq-field {
+    position: relative;
+    isolation: isolate;
+    flex: 0 0 1000px;
+    width: 1000px;
+    height: 560px;
+    overflow: hidden;
+    border: 7px solid #8e6b43;
+    border-radius: 21px;
+    background: linear-gradient(
+        180deg,
+        #cfb28a 0%,
+        #e4c696 45%,
+        #cda775 100%
+    );
+    box-shadow:
+        inset 0 0 0 2px #f0d5a3,
+        0 15px 30px #00000036;
+}
+
+.khandaq-page .khandaq-sky {
+    position: absolute;
+    inset: 0 0 45%;
+    z-index: 0;
+    background: linear-gradient(
+        180deg,
+        #c6c3a5,
+        #dfcba5 70%,
+        transparent
+    );
+    pointer-events: none;
+}
+
+.khandaq-page .khandaq-sun {
+    position: absolute;
+    top: -75px;
+    right: 115px;
+    z-index: 1;
+    width: 195px;
+    height: 195px;
+    border-radius: 50%;
+    background: #ffe0a2;
+    box-shadow: 0 0 85px #ffe0a28a;
+    pointer-events: none;
+}
+
+.khandaq-page .khandaq-sand {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background-image: radial-gradient(
+        #77573843 1px,
+        transparent 1px
+    );
+    background-size: 19px 19px;
+    pointer-events: none;
+}
+
+.khandaq-page .khandaq-dune {
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.khandaq-page .dune-one {
+    top: -130px;
+    left: -120px;
+    width: 540px;
+    height: 230px;
+    background: #9f835b59;
+}
+
+.khandaq-page .dune-two {
+    top: -145px;
+    right: -120px;
+    width: 570px;
+    height: 230px;
+    background: #ad91635c;
+}
+
+.khandaq-page .dune-three {
+    right: -100px;
+    bottom: -145px;
+    left: -95px;
+    height: 245px;
+    background: #b88c5d94;
+}
+
+.khandaq-page .khandaq-stone {
+    position: absolute;
+    z-index: 4;
+    width: 45px;
+    height: 26px;
+    border-radius: 53% 47% 44% 41%;
+    background: #987650;
+    box-shadow: 5px 6px #735638a6;
+    pointer-events: none;
+}
+
+.khandaq-page .stone-one {
+    top: 198px;
+    left: 40px;
+}
+
+.khandaq-page .stone-two {
+    top: 234px;
+    right: 45px;
+    transform: scale(.7);
+}
+
+.khandaq-page .stone-three {
+    bottom: 62px;
+    left: 195px;
+    transform: scale(.65);
+}
+
+.khandaq-page .stone-four {
+    bottom: 97px;
+    right: 140px;
+    transform: scale(.8);
+}
+
+.khandaq-page .khandaq-palm {
+    position: absolute;
+    z-index: 5;
+    width: 12px;
+    height: 62px;
+    border-radius: 3px;
+    background: linear-gradient(
+        90deg,
+        #87523f,
+        #bb7c54,
+        #774735
+    );
+    box-shadow: 3px 5px 5px #6a482b60;
+    pointer-events: none;
+}
+
+.khandaq-page .khandaq-palm::before {
+    content: "";
+    position: absolute;
+    top: -23px;
+    left: -32px;
+    width: 76px;
+    height: 53px;
+    background: linear-gradient(
+        145deg,
+        #79a05e,
+        #3d7544
+    );
+    clip-path: polygon(
+        50% 51%,
+        0 31%,
+        17% 7%,
+        48% 36%,
+        51% 0,
+        65% 15%,
+        63% 40%,
+        100% 11%,
+        95% 50%,
+        64% 61%,
+        85% 91%,
+        53% 73%,
+        28% 100%,
+        35% 64%,
+        4% 78%
+    );
+    filter: drop-shadow(
+        2px 3px 2px #4d713e66
+    );
+}
+
+.khandaq-page .khandaq-palm::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -4px;
+    width: 18px;
+    height: 9px;
+    border-radius: 50%;
+    background: #966345;
+}
+
+.khandaq-page .palm-one {
+    bottom: 125px;
+    left: 68px;
+    transform: scale(.85);
+}
+
+.khandaq-page .palm-two {
+    bottom: 94px;
+    right: 213px;
+    transform: scale(.7);
+}
+
+.khandaq-page .palm-three {
+    top: 188px;
+    right: 57px;
+    transform: scale(.62);
+}
+
+.khandaq-page .khandaq-camp {
+    position: absolute;
+    top: 160px;
+    right: 93px;
+    z-index: 5;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.khandaq-page .khandaq-tent {
+    width: 41px;
+    height: 38px;
+    background: #9b6650;
+    clip-path: polygon(
+        50% 0,
+        100% 100%,
+        0 100%
+    );
+    filter: drop-shadow(
+        3px 5px 3px #6e482b6b
+    );
+}
+
+.khandaq-page .tent-two {
+    width: 52px;
+    height: 48px;
+    background: #ad7257;
+}
+
+.khandaq-page .tent-three {
+    height: 33px;
+    background: #815d49;
+}
+
+.khandaq-page .khandaq-city {
+    position: absolute;
+    right: 46px;
+    bottom: 94px;
+    z-index: 6;
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    height: 90px;
+    pointer-events: none;
+}
+
+.khandaq-page .khandaq-city-tower {
+    position: relative;
+    width: 29px;
+    height: 72px;
+    border: 4px solid #875c3b;
+    background: #b98758;
+}
+
+.khandaq-page .khandaq-city-tower::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: -4px;
+    width: 29px;
+    height: 20px;
+    border-radius: 13px 13px 0 0;
+    background: #628065;
+}
+
+.khandaq-page .khandaq-city-main {
+    position: relative;
+    width: 88px;
+    height: 83px;
+    border: 4px solid #8e6040;
+    background: #ba8960;
+}
+
+.khandaq-page .khandaq-city-dome {
+    position: absolute;
+    top: -31px;
+    left: 11px;
+    width: 59px;
+    height: 31px;
+    border-radius: 35px 35px 0 0;
+    background: #628267;
+}
+
+.khandaq-page .khandaq-city-door {
+    position: absolute;
+    right: 28px;
+    bottom: 0;
+    width: 25px;
+    height: 43px;
+    border-radius: 16px 16px 0 0;
+    background: #66452e;
+}
+
+.khandaq-page .khandaq-city-caption {
+    position: absolute;
+    right: 36px;
+    bottom: 62px;
+    z-index: 15;
+    padding: 7px 10px;
+    border: 1px solid #e3c18c;
+    border-radius: 7px;
+    background: #244d39;
+    color: #ffe5af;
+    font-size: 9px;
+    font-weight: 900;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.khandaq-page .khandaq-info-tag {
+    position: absolute;
+    top: 19px;
+    left: 20px;
+    z-index: 19;
+    padding: 11px 15px;
+    border: 1px solid #e6c994;
+    border-radius: 9px;
+    background: #24513b;
+    color: #ffedc1;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .6px;
+    box-shadow: 0 5px 13px #5c3f2563;
+}
+
+.khandaq-page .khandaq-date-tag {
+    position: absolute;
+    top: 20px;
+    right: 23px;
+    z-index: 19;
+    padding: 8px 11px;
+    border: 1px solid #d7b57f;
+    border-radius: 8px;
+    background: #7d5b3bd9;
+    color: #fff0ce;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.khandaq-page .khandaq-event-card {
+    position: absolute;
+    top: 92px;
+    left: 25px;
+    z-index: 18;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 275px;
+    min-height: 75px;
+    padding: 12px 15px;
+    border: 1px solid #e8c995;
+    border-radius: 10px;
+    background: #254d3af3;
+    box-shadow: 0 6px 14px #553b2352;
+    color: #fff0ce;
+    pointer-events: none;
+}
+
+.khandaq-page .khandaq-event-card span {
+    color: #e9c68c;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.khandaq-page .khandaq-event-card strong {
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.khandaq-page .khandaq-salman {
+    position: absolute;
+    bottom: 133px;
+    left: 28px;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 192px;
+    padding: 13px 14px;
+    border: 1px solid #e6c58d;
+    border-radius: 10px;
+    background: #25563ef2;
+    color: #ffe9bb;
+    box-shadow: 0 6px 14px #583d2550;
+    pointer-events: none;
+}
+
+.khandaq-page .khandaq-salman strong {
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.khandaq-page .khandaq-salman span {
+    font-size: 10px;
+    color: #e3d0a5;
+}
+
+.khandaq-page .khandaq-trench-svg {
+    position: absolute;
+    inset: 0;
+    z-index: 7;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.khandaq-page .khandaq-trench-svg use {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.khandaq-page .khandaq-trench-rim {
+    stroke: #a77a4d;
+    stroke-width: 103px;
+}
+
+.khandaq-page .khandaq-trench-bank {
+    stroke: #e7c18d;
+    stroke-width: 90px;
+}
+
+.khandaq-page .khandaq-trench-middle {
+    stroke: #785335;
+    stroke-width: 74px;
+}
+
+.khandaq-page .khandaq-trench-floor {
+    stroke: #62412c;
+    stroke-width: 52px;
+}
+
+.khandaq-page .khandaq-trench-label {
+    position: absolute;
+    top: 280px;
+    left: 710px;
+    z-index: 12;
+    padding: 8px 11px;
+    border: 1px solid #e8cb97;
+    border-radius: 8px;
+    background: #6b4a31f5;
+    color: #ffe9bc;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+}
+
+.khandaq-page .khandaq-field:not([data-scene="ready"])
+.khandaq-trench-label {
+    opacity: 1;
+}
+
+.khandaq-page .khandaq-army-label {
+    position: absolute;
+    z-index: 16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 185px;
+    min-height: 52px;
+    padding: 10px 12px;
+    border: 1px solid #efcfa0;
+    border-radius: 9px;
+    color: #fff0d1;
+    box-shadow: 0 5px 13px #5e3b2360;
+    text-align: center;
+    pointer-events: none;
+}
+
+.khandaq-page .khandaq-army-label strong {
+    font-size: 10px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.khandaq-page .khandaq-army-label span {
+    color: #f8e1bc;
+    font-size: 10px;
+}
+
+.khandaq-page .khandaq-army-label.coalition {
+    top: 105px;
+    right: 100px;
+    background: #82463c;
+}
+
+.khandaq-page .khandaq-army-label.defenders {
+    right: 250px;
+    bottom: 122px;
+    background: #24593d;
+}
+
+.khandaq-page .khandaq-unit-layer,
+.khandaq-page .khandaq-scout-layer,
+.khandaq-page .khandaq-arrow-layer,
+.khandaq-page .khandaq-wind-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.khandaq-page #coalitionLayer {
+    z-index: 9;
+}
+
+.khandaq-page #defenderLayer {
+    z-index: 10;
+}
+
+.khandaq-page #scoutLayer {
+    z-index: 12;
+}
+
+.khandaq-page #arrowLayer {
+    z-index: 11;
+}
+
+.khandaq-page #windLayer {
+    z-index: 17;
+}
+
+.khandaq-page .khandaq-unit,
+.khandaq-page .khandaq-scout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    margin: -8.5px;
+    border: 2px solid #fff0d1;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow:
+        0 3px 6px #51341f83,
+        inset 0 -2px #0000001a;
+    will-change: transform;
+}
+
+.khandaq-page .khandaq-unit.green {
+    background: #238951;
+}
+
+.khandaq-page .khandaq-unit.red,
+.khandaq-page .khandaq-scout {
+    background: #be4c41;
+}
+
+.khandaq-page .khandaq-scout {
+    width: 20px;
+    height: 20px;
+    margin: -10px;
+    border: 3px solid #ffe3ab;
+    box-shadow:
+        0 0 0 3px #ab423b4d,
+        0 4px 7px #5839227e;
+    opacity: 0;
+}
+
+.khandaq-page .khandaq-flag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    will-change: transform;
+}
+
+.khandaq-page .khandaq-flag-pole {
+    position: absolute;
+    bottom: 0;
+    left: -2px;
+    width: 4px;
+    height: 69px;
+    border-radius: 2px;
+    background: linear-gradient(
+        90deg,
+        #6d4b2b,
+        #d9aa6e,
+        #755033
+    );
+    box-shadow: 2px 2px 4px #4d331f7c;
+}
+
+.khandaq-page .khandaq-flag-cloth {
+    position: absolute;
+    top: -66px;
+    left: 2px;
+    width: 39px;
+    height: 22px;
+    border: 1px solid #f6dca7;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 2px 3px 4px #5b3b225e;
+    transform-origin: left center;
+    animation: khandaqFlagWave 1.5s ease-in-out infinite;
+}
+
+.khandaq-page .khandaq-flag.green
+.khandaq-flag-cloth {
+    background: linear-gradient(
+        90deg,
+        #17623a,
+        #36a565,
+        #1b7745
+    );
+}
+
+.khandaq-page .khandaq-flag.red
+.khandaq-flag-cloth {
+    background: linear-gradient(
+        90deg,
+        #8d342f,
+        #d3574a,
+        #9a3c32
+    );
+}
+
+.khandaq-page .khandaq-flag-pawn {
+    position: absolute;
+    top: -11px;
+    left: -11px;
+    width: 22px;
+    height: 22px;
+    border: 3px solid #fff0cf;
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 3px #f2d89a4d,
+        0 4px 8px #4a301d82;
+}
+
+.khandaq-page .khandaq-flag.green
+.khandaq-flag-pawn {
+    background: #218c53;
+}
+
+.khandaq-page .khandaq-flag.red
+.khandaq-flag-pawn {
+    background: #bd483e;
+}
+
+@keyframes khandaqFlagWave {
+    0%, 100% {
+        transform: skewY(0deg);
+    }
+
+    50% {
+        transform: skewY(-9deg);
+    }
+}
+
+.khandaq-page .khandaq-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 3px;
+    border-radius: 3px;
+    background: #6b4a30;
+    box-shadow: 0 0 3px #ffe3ad8a;
+    transform-origin: center;
+    opacity: 0;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+.khandaq-page .khandaq-arrow::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -2px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid #6b4a30;
+}
+
+.khandaq-page .khandaq-impact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 14;
+    width: 95px;
+    height: 95px;
+    margin: -47.5px;
+    border: 3px solid #ffe5af;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #f5ca7966;
+    opacity: 0;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+.khandaq-page .khandaq-dust {
+    position: absolute;
+    top: 308px;
+    left: 452px;
+    z-index: 8;
+    width: 145px;
+    height: 95px;
+    border-radius: 50%;
+    background: #f4d5a5a3;
+    filter: blur(15px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.khandaq-page .khandaq-field[data-scene="breach"]
+.khandaq-dust,
+.khandaq-page .khandaq-field[data-scene="defend"]
+.khandaq-dust {
+    opacity: .7;
+    animation: khandaqDustPulse 1.3s ease-in-out infinite;
+}
+
+@keyframes khandaqDustPulse {
+    0%, 100% {
+        transform: scale(.75);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+.khandaq-page .khandaq-breach-alert,
+.khandaq-page .khandaq-storm-banner {
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    z-index: 21;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 360px;
+    padding: 12px 17px;
+    border: 2px solid #ebc68c;
+    border-radius: 10px;
+    background: #793e35f4;
+    color: #fff1d4;
+    text-align: center;
+    box-shadow: 0 8px 18px #57342064;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -10px);
+    pointer-events: none;
+}
+
+.khandaq-page .khandaq-breach-alert strong,
+.khandaq-page .khandaq-storm-banner strong {
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.khandaq-page .khandaq-breach-alert span,
+.khandaq-page .khandaq-storm-banner span {
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.khandaq-page .khandaq-storm-banner {
+    background: #25523df5;
+}
+
+.khandaq-page .khandaq-field[data-scene="breach"]
+.khandaq-breach-alert,
+.khandaq-page .khandaq-field[data-scene="defend"]
+.khandaq-breach-alert,
+.khandaq-page .khandaq-field[data-scene="storm"]
+.khandaq-storm-banner,
+.khandaq-page .khandaq-field[data-scene="retreat"]
+.khandaq-storm-banner {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.khandaq-page .khandaq-field[data-scene="breach"]
+.khandaq-event-card,
+.khandaq-page .khandaq-field[data-scene="defend"]
+.khandaq-event-card,
+.khandaq-page .khandaq-field[data-scene="storm"]
+.khandaq-event-card,
+.khandaq-page .khandaq-field[data-scene="retreat"]
+.khandaq-event-card {
+    opacity: .85;
+}
+
+.khandaq-page .khandaq-wind-streak {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    border-radius: 20px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #fff2d0ee 40%,
+        #fff7d9a3 80%,
+        transparent
+    );
+    box-shadow: 0 0 6px #fff1cb;
+    opacity: 0;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+.khandaq-page .khandaq-field[data-scene="storm"]
+.khandaq-camp,
+.khandaq-page .khandaq-field[data-scene="retreat"]
+.khandaq-camp {
+    animation: khandaqCampShake .28s linear infinite alternate;
+}
+
+@keyframes khandaqCampShake {
+    from {
+        transform: translateX(-4px) rotate(-2deg);
+    }
+
+    to {
+        transform: translateX(4px) rotate(2deg);
+    }
+}
+
+.khandaq-page .trench-dot {
+    border: 2px solid #e1bc87;
+    background: #68472f;
+}
+
+.khandaq-page .battle-legend {
+    bottom: 64px;
+    left: 19px;
+}
+
+.khandaq-page .battle-hint {
+    bottom: 15px;
+    min-width: 520px;
+    max-width: 760px;
+}
+
+.khandaq-page .scene-progress {
+    z-index: 23;
+}
+
+.khandaq-page .start-overlay,
+.khandaq-page .quiz-overlay,
+.khandaq-page .result-overlay,
+.khandaq-page .reward-overlay {
+    z-index: 40;
+}
+
+.khandaq-page .hidden {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .khandaq-page .battle-scroll {
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+
+    .khandaq-page .khandaq-field {
+        flex: 0 0 1000px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .khandaq-page .khandaq-flag-cloth,
+    .khandaq-page .khandaq-dust,
+    .khandaq-page .khandaq-camp {
+        animation: none !important;
+    }
+}

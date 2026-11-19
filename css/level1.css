@@ -1,0 +1,718 @@
+
+@import url("./level2.css");
+
+#battlefield {
+    position: relative;
+    isolation: isolate;
+    width: 1000px;
+    height: 560px;
+    overflow: hidden;
+    border: 7px solid #946f44;
+    border-radius: 21px;
+    background: radial-gradient(
+        circle at 80% 17%,
+        #f4d59e 0%,
+        #e6c591 46%,
+        #c59c6d 100%
+    );
+    box-shadow:
+        inset 0 0 0 2px #f6dfac,
+        0 15px 30px #00000037;
+}
+
+#battlefield::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image: radial-gradient(
+        #7456363c 1px,
+        transparent 1px
+    );
+    background-size: 20px 20px;
+    pointer-events: none;
+}
+
+#battlefield::after {
+    content: "";
+    position: absolute;
+    right: -90px;
+    bottom: -142px;
+    left: -85px;
+    z-index: 1;
+    height: 220px;
+    border-radius: 50%;
+    background: #b68c5c6b;
+    pointer-events: none;
+}
+
+#battlefield .badar-sun {
+    position: absolute;
+    top: -70px;
+    right: 82px;
+    z-index: 2;
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    background: #ffe1a2;
+    box-shadow: 0 0 90px #ffe4b19a;
+    pointer-events: none;
+}
+
+#battlefield .badar-dune,
+#battlefield .badar-desert-dune {
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#battlefield .badar-info-tag,
+#battlefield .badar-scene-tag,
+#battlefield .badar-expedition-tag {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    z-index: 18;
+    padding: 11px 14px;
+    border: 1px solid #e6c88e;
+    border-radius: 9px;
+    background: #23513a;
+    color: #f9e5b6;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .7px;
+    box-shadow: 0 5px 12px #48351d35;
+}
+
+#battlefield .badar-well-label,
+#battlefield .badar-wells-label,
+#battlefield .well-label,
+#battlefield .badar-well-caption {
+    display: none !important;
+}
+
+#badarDecor {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+}
+
+#badarDecor .badar-wells-title {
+    position: absolute;
+    top: 120px;
+    left: 55px;
+    padding: 8px 12px;
+    border: 1px solid #dfbf88;
+    border-radius: 8px;
+    background: #705137;
+    color: #fff0c7;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    box-shadow: 0 4px 10px #64442645;
+}
+
+#badarDecor .badar-well-visual {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    border: 7px solid #946e45;
+    border-radius: 50%;
+    background: #cfa876;
+    box-shadow:
+        inset 0 0 0 4px #edd1a0,
+        4px 9px 0 #7657376b;
+}
+
+#badarDecor .badar-well-visual::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 40% 28%,
+        #83d6db,
+        #4395a6 64%,
+        #225d74 100%
+    );
+    box-shadow: inset 0 4px 9px #174e5d8c;
+}
+
+#badarDecor .badar-well-visual::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 23px;
+    width: 30px;
+    height: 10px;
+    border-radius: 50%;
+    background: #e3ffff94;
+    transform: rotate(-24deg);
+}
+
+#badarDecor .badar-well-visual.well-one {
+    top: 165px;
+    left: 82px;
+    width: 86px;
+    height: 86px;
+}
+
+#badarDecor .badar-well-visual.well-two {
+    top: 205px;
+    left: 188px;
+    width: 61px;
+    height: 61px;
+    border-width: 5px;
+}
+
+#badarDecor .well-two::after {
+    top: 14px;
+    left: 17px;
+    width: 21px;
+    height: 7px;
+}
+
+#badarDecor .badar-palm {
+    position: absolute;
+    width: 13px;
+    height: 64px;
+    border-radius: 5px;
+    background: linear-gradient(
+        90deg,
+        #8d573f,
+        #bd8060,
+        #82533e
+    );
+    box-shadow: 4px 7px 8px #6b4b326b;
+}
+
+#badarDecor .badar-palm::before {
+    content: "";
+    position: absolute;
+    top: -21px;
+    left: -29px;
+    width: 72px;
+    height: 48px;
+    background: #56844c;
+    clip-path: polygon(
+        50% 50%,
+        0 31%,
+        19% 8%,
+        48% 36%,
+        50% 0,
+        67% 15%,
+        61% 41%,
+        100% 14%,
+        96% 52%,
+        64% 61%,
+        83% 92%,
+        52% 74%,
+        28% 100%,
+        34% 64%,
+        7% 77%
+    );
+    filter: drop-shadow(
+        1px 3px 2px #4b662e70
+    );
+}
+
+#badarDecor .badar-palm.palm-one {
+    top: 170px;
+    left: 290px;
+    transform: scale(.8);
+}
+
+#badarDecor .badar-palm.palm-two {
+    top: 210px;
+    right: 50px;
+    transform: scale(.65);
+}
+
+#badarDecor .badar-rock-visual {
+    position: absolute;
+    width: 48px;
+    height: 25px;
+    border-radius: 52% 55% 40% 45%;
+    background: #9c7954;
+    box-shadow: 5px 6px #7656388c;
+}
+
+#badarDecor .badar-rock-visual.rock-one {
+    top: 390px;
+    left: 45px;
+}
+
+#badarDecor .badar-rock-visual.rock-two {
+    top: 450px;
+    left: 286px;
+    transform: scale(.65);
+}
+
+#badarDecor .badar-rock-visual.rock-three {
+    top: 390px;
+    right: 50px;
+}
+
+#badarDecor .badar-date {
+    position: absolute;
+    top: 25px;
+    right: 21px;
+    padding: 8px 12px;
+    border: 1px solid #d3aa74;
+    border-radius: 8px;
+    background: #7b5b398c;
+    color: #634425;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+#badarDecor .badar-trail {
+    position: absolute;
+    bottom: 80px;
+    left: 15px;
+    width: 965px;
+    height: 70px;
+    border-top: 3px dotted #9e76445c;
+    border-radius: 50%;
+    transform: rotate(-2deg);
+}
+
+#unitsLayer,
+#duelUnitsLayer,
+#angelUnitsLayer,
+#lightParticles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+#unitsLayer {
+    z-index: 8;
+}
+
+#duelUnitsLayer {
+    z-index: 15;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#angelUnitsLayer {
+    z-index: 12;
+}
+
+#lightParticles {
+    z-index: 13;
+}
+
+#unitsLayer .badar-unit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 17px;
+    height: 17px;
+    margin: -8.5px;
+    border: 2px solid #fff0cc;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow:
+        0 3px 6px #4f322078,
+        inset 0 -2px #0000001b;
+    will-change: transform;
+}
+
+#unitsLayer .badar-unit.unit-green {
+    background: #258955;
+}
+
+#unitsLayer .badar-unit.unit-red {
+    background: #c44e41;
+}
+
+#muslimLabel,
+#qurayshLabel {
+    position: absolute !important;
+    top: 188px !important;
+    z-index: 14 !important;
+    display: block !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+    overflow: visible !important;
+    font-size: 0 !important;
+    transition: opacity .2s ease;
+    pointer-events: none;
+}
+
+#muslimLabel > *,
+#qurayshLabel > * {
+    display: none !important;
+}
+
+#muslimLabel::before,
+#qurayshLabel::before {
+    position: absolute;
+    top: 0;
+    left: -79px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 158px;
+    height: 51px;
+    border: 1px solid #e8c68c;
+    border-radius: 9px;
+    color: #fff0c9;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.65;
+    text-align: center;
+    white-space: pre;
+    box-shadow: 0 5px 12px #59402252;
+}
+
+#muslimLabel::before {
+    content: "PASUKAN MUSLIM\A±313 ORANG";
+    background: #21563a;
+}
+
+#qurayshLabel::before {
+    content: "PASUKAN QURAISY\A±1.000 ORANG";
+    background: #853d35;
+}
+
+#muslimLabel::after,
+#qurayshLabel::after {
+    content: "";
+    position: absolute;
+    top: 53px;
+    left: 0;
+    width: 38px;
+    height: 63px;
+    filter: drop-shadow(
+        2px 3px 2px #7047235d
+    );
+}
+
+#muslimLabel::after {
+    background:
+        linear-gradient(
+            90deg,
+            #1f7244,
+            #38a96a,
+            #206b42
+        ) 3px 5px / 32px 18px no-repeat,
+        linear-gradient(
+            #e6c791,
+            #8d633d
+        ) 0 0 / 3px 62px no-repeat;
+}
+
+#qurayshLabel::after {
+    background:
+        linear-gradient(
+            90deg,
+            #a03c33,
+            #d45b50,
+            #963b31
+        ) 3px 5px / 32px 18px no-repeat,
+        linear-gradient(
+            #e6c791,
+            #8d633d
+        ) 0 0 / 3px 62px no-repeat;
+}
+
+#duelUnitsLayer .badar-duel-fighter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 23px;
+    height: 23px;
+    margin: -11.5px;
+    border: 3px solid #fff1d0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow:
+        0 0 0 3px #ffe5a95c,
+        0 4px 9px #54351d8c;
+    will-change: transform;
+}
+
+#duelUnitsLayer .badar-duel-fighter.muslim {
+    background: #209358;
+}
+
+#duelUnitsLayer .badar-duel-fighter.quraysh {
+    background: #c84b3f;
+}
+
+#duelUnitsLayer .duel-name {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 27px;
+    padding: 3px 7px;
+    border: 1px solid #e9ca91;
+    border-radius: 7px;
+    color: #fff0d0;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+    box-shadow: 0 4px 8px #51351d45;
+    transform: translateY(-50%);
+    transition: opacity .16s ease;
+}
+
+#duelUnitsLayer .muslim .duel-name {
+    right: calc(100% + 11px);
+    background: #21503a;
+}
+
+#duelUnitsLayer .quraysh .duel-name {
+    left: calc(100% + 11px);
+    background: #793e34;
+}
+
+#badarDuelBadge {
+    position: absolute;
+    top: 273px;
+    left: 50%;
+    z-index: 16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding: 6px 16px;
+    border: 1px solid #d9b984;
+    border-radius: 9px;
+    background: #604830ea;
+    color: #ffe6b4;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+#badarDuelBadge strong {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+#battlefield[data-scene="duel"] #duelUnitsLayer,
+#battlefield[data-scene="duel-fight"] #duelUnitsLayer,
+#battlefield[data-scene="duel-end"] #duelUnitsLayer {
+    opacity: 1;
+    visibility: visible;
+}
+
+#battlefield[data-scene="duel"] #badarDuelBadge,
+#battlefield[data-scene="duel-fight"] #badarDuelBadge,
+#battlefield[data-scene="duel-end"] #badarDuelBadge {
+    opacity: 1;
+}
+
+#battlefield[data-scene="duel-fight"] #duelUnitsLayer .duel-name {
+    opacity: 0;
+}
+
+#battlefield[data-scene="duel-fight"] .badar-duel-fighter {
+    filter: drop-shadow(
+        0 0 8px #fbe5aa
+    );
+}
+
+#duelArena {
+    display: none !important;
+}
+
+#divineLight {
+    position: absolute;
+    inset: 0;
+    z-index: 11;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#divineLight::before {
+    content: "";
+    position: absolute;
+    top: 195px;
+    left: 250px;
+    width: 470px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(
+        ellipse,
+        #fff8d66d 0%,
+        #ffdf9861 45%,
+        transparent 75%
+    );
+    filter: blur(12px);
+}
+
+#divineLight .badar-light-title {
+    position: absolute;
+    top: 119px;
+    left: 50%;
+    width: max-content;
+    max-width: 520px;
+    padding: 10px 15px;
+    border: 1px solid #f4db9f;
+    border-radius: 9px;
+    background: #24513eed;
+    color: #fff0c0;
+    font-size: 12px;
+    font-weight: 900;
+    transform: translateX(-50%);
+}
+
+#battlefield[data-scene="angels"] #divineLight {
+    opacity: 1;
+    visibility: visible;
+}
+
+#angelUnitsLayer .badar-angel-unit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    margin: -8.5px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: #fffbea;
+    box-shadow:
+        0 0 10px #fff8de,
+        0 0 18px #ffe5a3;
+    will-change: transform, opacity;
+}
+
+#lightParticles .light-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff8d2;
+    box-shadow: 0 0 12px #fff5c3;
+    animation: badarTwinkle 1.8s ease-in-out infinite;
+}
+
+@keyframes badarTwinkle {
+    0%, 100% {
+        opacity: .15;
+        transform: translateY(7px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-8px);
+    }
+}
+
+#battlefield .battle-legend {
+    position: absolute;
+    bottom: 68px;
+    left: 17px;
+    z-index: 19;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    pointer-events: none;
+}
+
+#battlefield .battle-legend > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border: 1px solid #dcc18a6b;
+    border-radius: 8px;
+    background: #194331ec;
+    color: #fff0d5;
+    font-size: 10px;
+}
+
+#battlefield .battle-legend i {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+#battlefield .battle-legend .green-dot {
+    background: #258a54;
+}
+
+#battlefield .battle-legend .red-dot {
+    background: #c65145;
+}
+
+#battlefield .battle-legend .angel-dot,
+#battlefield .battle-legend .light-dot {
+    border: 2px solid #e6ca91;
+    background: #fff7e2;
+    box-shadow: 0 0 7px #fff1b5;
+}
+
+#battlefield .battle-hint {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    z-index: 19;
+    min-width: 480px;
+    max-width: 770px;
+    min-height: 40px;
+    padding: 11px 17px;
+    border: 1px solid #d8b97e;
+    border-radius: 30px;
+    background: #194431f5;
+    color: #fce1a9;
+    font-size: 11px;
+    font-weight: 800;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+#battlefield .scene-progress {
+    z-index: 20;
+}
+
+#battlefield .start-overlay,
+#battlefield .quiz-overlay,
+#battlefield .result-overlay,
+#battlefield .reward-overlay {
+    z-index: 40;
+}
+
+#battlefield .hidden {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .battle-scroll {
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+
+    #battlefield {
+        flex: 0 0 1000px;
+    }
+}
